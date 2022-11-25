@@ -57,6 +57,14 @@ h2 {
 a {
     text-decoration: none;
     font-size: 1.1rem;
+    transition: 300ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $marineColor;
+        color: $paleGreyColor;
+    }
 }
 
 p {
@@ -72,6 +80,16 @@ input[type="submit"] {
     padding: 10px 15px;
     color: $marineColor;
     font-size: 1.1rem;
+    transition: 300ms;
+    border: 1px solid $paleRoseColor;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $marineColor;
+        color: $paleRoseColor;
+        border: 1px solid $paleRoseColor;
+    }
 }
 
 /* General Icon Styles */
@@ -84,12 +102,24 @@ i {
 
 /* HEADER BEGINS */
 header {
-    background-image: url(../assets/header-group-appliances.png);
-    height: 100vh;
+
+    background-image: url(../assets/header-group-appliances.png), radial-gradient(at bottom right, #fff, $paleRoseColor);
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-color: $paleRoseColor;
+    max-width: 100%;
     padding: 25px 0;
+    position: relative;
+
+
+    .social-media-icons {
+        position: absolute;
+        right: 4%;
+        top: 20%;
+
+        li {
+            padding: 10px 0;
+        }
+    }
 
     /* Top Nav Styles */
     nav ul {
@@ -112,48 +142,31 @@ header {
     }
 }
 
-/* Header Flex Container Styles */
-.header-container {
+/* Electric Select Logo */
+.header-logo {
     display: flex;
-    height: calc(100vh - 77px);
+    height: calc(100vh - 44px);
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    line-height: 5rem;
 
-    /* Electric Select Logo */
-    .logo-section {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 50%;
-        justify-content: center;
 
-        h1 {
-            font-size: 4rem;
-            text-transform: uppercase;
-            color: $waterBlueColor;
-            margin: 0;
-        }
 
-        p {
-            font-size: 1.8rem;
-            text-transform: lowercase;
-            columns: $marineColor;
-        }
+    h1 {
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: $waterBlueColor;
+        margin: 0;
     }
 
-    /* Social Icons Styles */
-    .social-media-icons {
-        display: flex;
-        flex-basis: 50%;
-        justify-content: end;
-        ul {
-                flex-direction: column;
-                padding-top: 20%;
-                li {
-                    padding: 10px 0;
-                }
-            }
+    p {
+        font-size: 1.8rem;
+        text-transform: lowercase;
+        columns: $marineColor;
+        padding: 20px 0;
     }
 }
-
-
 
 /* HEADER ENDS */
 
@@ -161,6 +174,7 @@ header {
 
 .gallery-section {
     background-color: $lightPinkColor;
+    padding-bottom: 40px;
 
     h2 {
         text-align: center;
@@ -202,6 +216,15 @@ header {
         .opposite-button {
             background-color: $marineColor;
             color: $lightPinkColor;
+            transition: 300ms;
+            border: 1px solid $marineColor;
+
+            &:hover,
+            &:focus &:active {
+                background-color: $paleRoseColor;
+                color: $marineColor;
+                border: 1px solid $marineColor;
+            }
         }
     }
 }
@@ -259,16 +282,18 @@ header {
             align-items: center;
 
             // icon styling
-            i {
-                color: $marineColor;
-                font-size: 4em;
-                padding: 10px;
-            }
+
 
             a {
                 font-size: 1.4rem;
                 color: $waterBlueColor;
                 letter-spacing: .1rem;
+
+                i {
+                    color: $marineColor;
+                    font-size: 3rem;
+                    padding: 10px;
+                }
             }
         }
     }
@@ -329,6 +354,16 @@ footer {
 
             input[type="submit"] {
                 border: none;
+                cursor: pointer;
+                border: 1px solid $paleRoseColor;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $marineColor;
+                    color: $paleRoseColor;
+                    border: 1px solid $paleRoseColor;
+                }
             }
         }
     }

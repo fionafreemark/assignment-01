@@ -285,6 +285,12 @@ h2 {
 a {
   text-decoration: none;
   font-size: 1.1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+a:hover, a:focus, a:active {
+  background-color: #042259;
+  color: #F0F5FF;
 }
 
 p {
@@ -299,6 +305,17 @@ input[type=submit] {
   padding: 10px 15px;
   color: #042259;
   font-size: 1.1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border: 1px solid #F5C8CF;
+}
+.read-more:hover, .read-more:focus, .read-more:active,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active {
+  background-color: #042259;
+  color: #F5C8CF;
+  border: 1px solid #F5C8CF;
 }
 
 /* General Icon Styles */
@@ -310,13 +327,21 @@ i {
 /* GLOBAL STYLING ENDS */
 /* HEADER BEGINS */
 header {
-  background-image: url(../assets/header-group-appliances.png);
-  height: 100vh;
+  background-image: url(../assets/header-group-appliances.png), radial-gradient(at bottom right, #fff, #F5C8CF);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-color: #F5C8CF;
+  max-width: 100%;
   padding: 25px 0;
+  position: relative;
   /* Top Nav Styles */
+}
+header .social-media-icons {
+  position: absolute;
+  right: 4%;
+  top: 20%;
+}
+header .social-media-icons li {
+  padding: 10px 0;
 }
 header nav ul {
   display: -webkit-box;
@@ -338,67 +363,42 @@ header nav a:hover, header nav a:focus {
   color: #1D81CC;
 }
 
-/* Header Flex Container Styles */
-.header-container {
+/* Electric Select Logo */
+.header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(100vh - 77px);
-  /* Electric Select Logo */
-  /* Social Icons Styles */
-}
-.header-container .logo-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: calc(100vh - 44px);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 5rem;
 }
-.header-container .logo-section h1 {
-  font-size: 4rem;
+.header-logo h1 {
+  font-size: 6rem;
   text-transform: uppercase;
   color: #1D81CC;
   margin: 0;
 }
-.header-container .logo-section p {
+.header-logo p {
   font-size: 1.8rem;
   text-transform: lowercase;
   -webkit-columns: #042259;
      -moz-columns: #042259;
           columns: #042259;
-}
-.header-container .social-media-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-.header-container .social-media-icons ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 20%;
-}
-.header-container .social-media-icons ul li {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 /* HEADER ENDS */
 /* GALLERY SECTION BEGINS */
 .gallery-section {
   background-color: #FCDDE2;
+  padding-bottom: 40px;
 }
 .gallery-section h2 {
   text-align: center;
@@ -452,6 +452,14 @@ header nav a:hover, header nav a:focus {
 .coffee-appliances .coffee-appliances-text .opposite-button {
   background-color: #042259;
   color: #FCDDE2;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border: 1px solid #042259;
+}
+.coffee-appliances .coffee-appliances-text .opposite-button:hover, .coffee-appliances .coffee-appliances-text .opposite-button:focus .coffee-appliances .coffee-appliances-text .opposite-button:active {
+  background-color: #F5C8CF;
+  color: #042259;
+  border: 1px solid #042259;
 }
 
 /* GALLERY SECTION ENDS */
@@ -522,19 +530,19 @@ header nav a:hover, header nav a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.icon-section .icon-flex-container .shop i,
-.icon-section .icon-flex-container .jobs i,
-.icon-section .icon-flex-container .events i {
-  color: #042259;
-  font-size: 4em;
-  padding: 10px;
-}
 .icon-section .icon-flex-container .shop a,
 .icon-section .icon-flex-container .jobs a,
 .icon-section .icon-flex-container .events a {
   font-size: 1.4rem;
   color: #1D81CC;
   letter-spacing: 0.1rem;
+}
+.icon-section .icon-flex-container .shop a i,
+.icon-section .icon-flex-container .jobs a i,
+.icon-section .icon-flex-container .events a i {
+  color: #042259;
+  font-size: 3rem;
+  padding: 10px;
 }
 
 /* ICON SECTION ENDS */
@@ -601,6 +609,13 @@ footer > p {
 }
 .footer-flex-container .stay-updated-form .email-container input[type=submit] {
   border: none;
+  cursor: pointer;
+  border: 1px solid #F5C8CF;
+}
+.footer-flex-container .stay-updated-form .email-container input[type=submit]:hover, .footer-flex-container .stay-updated-form .email-container input[type=submit]:focus, .footer-flex-container .stay-updated-form .email-container input[type=submit]:active {
+  background-color: #042259;
+  color: #F5C8CF;
+  border: 1px solid #F5C8CF;
 }
 .footer-flex-container .contact {
   display: -webkit-box;
