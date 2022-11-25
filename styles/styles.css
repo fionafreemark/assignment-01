@@ -237,6 +237,7 @@ html {
 
 /* GLOBAL STYLING BEGINS */
 * {
+  border: 1px solid rgb(195, 81, 237);
   margin: 0;
 }
 * body {
@@ -315,6 +316,7 @@ header {
   background-position: bottom right;
   background-color: #F5C8CF;
   padding: 25px 0;
+  /* Top Nav Styles */
 }
 header nav ul {
   display: -webkit-box;
@@ -335,14 +337,17 @@ header nav a {
 header nav a:hover, header nav a:focus {
   color: #1D81CC;
 }
-header .header-container {
+
+/* Header Flex Container Styles */
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* height: calc(100vh - 20px - 20px); */
-  height: 80vh;
+  height: calc(100vh - 77px);
+  /* Electric Select Logo */
+  /* Social Icons Styles */
 }
-header .header-container .logo-section {
+.header-container .logo-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +361,20 @@ header .header-container .logo-section {
       -ms-flex-pack: center;
           justify-content: center;
 }
-header .header-container .social-media-icons {
+.header-container .logo-section h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #1D81CC;
+  margin: 0;
+}
+.header-container .logo-section p {
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  -webkit-columns: #042259;
+     -moz-columns: #042259;
+          columns: #042259;
+}
+.header-container .social-media-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,24 +384,15 @@ header .header-container .social-media-icons {
       -ms-flex-pack: end;
           justify-content: end;
 }
-header .header-container .social-media-icons ul {
+.header-container .social-media-icons ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 20%;
 }
-header h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  color: #1D81CC;
-  margin: 0;
-}
-header .header-container p {
-  font-size: 1.8rem;
-  text-transform: lowercase;
-  -webkit-columns: #042259;
-     -moz-columns: #042259;
-          columns: #042259;
+.header-container .social-media-icons ul li {
+  padding: 10px 0;
 }
 
 /* HEADER ENDS */

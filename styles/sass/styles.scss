@@ -5,7 +5,7 @@
 
 /* GLOBAL STYLING BEGINS */
 * {
-    // border: 1px solid rgb(195, 81, 237);
+    border: 1px solid rgb(195, 81, 237);
     margin: 0;
 
     body {
@@ -91,6 +91,7 @@ header {
     background-color: $paleRoseColor;
     padding: 25px 0;
 
+    /* Top Nav Styles */
     nav ul {
         display: flex;
         justify-content: flex-end;
@@ -109,43 +110,50 @@ header {
             color: $waterBlueColor;
         }
     }
+}
 
-    .header-container {
+/* Header Flex Container Styles */
+.header-container {
+    display: flex;
+    height: calc(100vh - 77px);
+
+    /* Electric Select Logo */
+    .logo-section {
         display: flex;
-        /* height: calc(100vh - 20px - 20px); */
-        height: 80vh;
+        flex-direction: column;
+        flex-basis: 50%;
+        justify-content: center;
 
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 50%;
-            justify-content: center;
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: $waterBlueColor;
+            margin: 0;
         }
 
-        .social-media-icons {
-            display: flex;
-            flex-basis: 50%;
-            justify-content: end;
-        }
-
-        .social-media-icons ul {
-            flex-direction: column;
+        p {
+            font-size: 1.8rem;
+            text-transform: lowercase;
+            columns: $marineColor;
         }
     }
 
-    h1 {
-        font-size: 4rem;
-        text-transform: uppercase;
-        color: $waterBlueColor;
-        margin: 0;
-    }
-
-    .header-container p {
-        font-size: 1.8rem;
-        text-transform: lowercase;
-        columns: $marineColor;
+    /* Social Icons Styles */
+    .social-media-icons {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: end;
+        ul {
+                flex-direction: column;
+                padding-top: 20%;
+                li {
+                    padding: 10px 0;
+                }
+            }
     }
 }
+
+
 
 /* HEADER ENDS */
 
