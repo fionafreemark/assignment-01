@@ -39,9 +39,11 @@ a {
 h1,
 h2,
 h3,
-a {
+a,
+input[type="submit"] {
     font-family: $headerFont;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 h2 {
@@ -52,17 +54,22 @@ h2 {
 p {
     font-size: 1rem;
     line-height: 1.6rem;
+    color: $darkGreyColor;
 }
 
 // Read More Button Styles
-.read-more {
+.read-more,
+input[type="submit"] {
     background-color: $paleRoseColor;
     padding: 10px 15px;
     color: $marineColor;
+    font-size: 1.1rem;
 }
 
 img {
     width: 100%;
+    height: auto;
+    display: block
 }
 
 /* icon base styling */
@@ -158,10 +165,6 @@ h1 {
         li {
             flex-basis: 32%;
         }
-
-        img {
-            width: 100%;
-        }
     }
 }
 
@@ -169,7 +172,7 @@ h1 {
     display: flex;
     padding: 60px 0;
 
-    img {
+    .img-container {
         width: 30%;
     }
 
@@ -215,11 +218,12 @@ h1 {
     }
 
     .smoothies-anyone {
-        padding: 100px 100px 100px 150px;
+        // padding: 100px 100px 100px 150px;
+        padding: 5vh 5vw 5vh 11vw;
     }
-
     .new-home {
-        padding: 100px 150px 100px 100px;
+        // padding: 100px 150px 100px 100px;
+        padding: 5vh 11vw 5vh 5vw;
     }
 }
 
@@ -230,10 +234,11 @@ h1 {
 .icon-section {
     background-color: $lightPinkColor;
     padding: 80px 0;
+
     .icon-flex-container {
         display: flex;
         justify-content: space-evenly;
-        
+
         .shop,
         .jobs,
         .events {
@@ -259,3 +264,78 @@ h1 {
 }
 
 /* ICON SECTION ENDS */
+
+/* FOOTER SECTION BEGINS */
+
+footer {
+    background-color: $paleGreyColor;
+
+    >p {
+            background-color: $marineColor;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+}
+
+/* footer structure */
+.footer-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+
+
+    h3,
+    a {
+        color: $waterBlueColor;
+        font-size: 1.2rem;
+        letter-spacing: .1rem;
+    }
+
+    h3 {
+        padding-bottom: 10px;
+    }
+
+    .stay-updated-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-basis: 50%;
+
+        .email-container {
+            display: flex;
+            width: 100%;
+            padding-top: 10px;
+
+            input[type="email"] {
+                width: 75%;
+                padding: 10px 15px;
+                font-size: 1rem;
+                font-family: $baseFont;
+                border: 1px solid $lightPinkColor;
+            }
+
+            input[type="submit"] {
+                border: none;
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 20%;
+        // margin-left: 10%;
+    }
+
+    .secondary-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-basis: 15%;
+        }
+
+}

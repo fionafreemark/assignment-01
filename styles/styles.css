@@ -271,9 +271,11 @@ a {
 h1,
 h2,
 h3,
-a {
+a,
+input[type=submit] {
   font-family: "Emblema One", cursive;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 h2 {
@@ -284,16 +286,21 @@ h2 {
 p {
   font-size: 1rem;
   line-height: 1.6rem;
+  color: #1F2022;
 }
 
-.read-more {
+.read-more,
+input[type=submit] {
   background-color: #F5C8CF;
   padding: 10px 15px;
   color: #042259;
+  font-size: 1.1rem;
 }
 
 img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* icon base styling */
@@ -415,9 +422,6 @@ h1 {
   -ms-flex-preferred-size: 32%;
       flex-basis: 32%;
 }
-.gallery-section ul img {
-  width: 100%;
-}
 
 .coffee-appliances {
   display: -webkit-box;
@@ -425,7 +429,7 @@ h1 {
   display: flex;
   padding: 60px 0;
 }
-.coffee-appliances img {
+.coffee-appliances .img-container {
   width: 30%;
 }
 .coffee-appliances .coffee-appliances-text {
@@ -485,10 +489,10 @@ h1 {
   background-color: #F0F5FF;
 }
 .blog-section .smoothies-anyone {
-  padding: 100px 100px 100px 150px;
+  padding: 5vh 5vw 5vh 11vw;
 }
 .blog-section .new-home {
-  padding: 100px 150px 100px 100px;
+  padding: 5vh 11vw 5vh 5vw;
 }
 
 /* BLOG SECTION ENDS */
@@ -538,3 +542,98 @@ h1 {
 }
 
 /* ICON SECTION ENDS */
+/* FOOTER SECTION BEGINS */
+footer {
+  background-color: #F0F5FF;
+}
+footer > p {
+  background-color: #042259;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* footer structure */
+.footer-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0;
+}
+.footer-flex-container h3,
+.footer-flex-container a {
+  color: #1D81CC;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+.footer-flex-container h3 {
+  padding-bottom: 10px;
+}
+.footer-flex-container .stay-updated-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.footer-flex-container .stay-updated-form .email-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+}
+.footer-flex-container .stay-updated-form .email-container input[type=email] {
+  width: 75%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  border: 1px solid #FCDDE2;
+}
+.footer-flex-container .stay-updated-form .email-container input[type=submit] {
+  border: none;
+}
+.footer-flex-container .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.footer-flex-container .secondary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
