@@ -2,3 +2,130 @@
 @use 'variables' as *;
 @use 'setup';
 
+
+/* Styling Notes */
+/* Marine #042259 Pale Rose #F5C8CF Pale Grey #F0F5FF */
+/* Light Pink #FCDDE2 Darker Grey #1F2022 Water Blue #1D81CC */
+/*     font-family: 'Barlow',
+    sans-serif;
+
+    font-family: 'Catamaran',
+    sans-serif; 600
+
+    font-family: 'Emblema One',
+    cursive; */
+
+/* Global Styling Begins */
+* {
+    /* border: 1px solid rgb(195, 81, 237); */
+    margin: 0;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+a {
+    font-family: 'Emblema One', cursive;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Global Styling Ends */
+
+/* Header Begins */
+header {
+    background-image: url(../assets/header-group-appliances.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #FCDDE2;
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav a {
+    color: #042259;
+    text-transform: uppercase;
+    padding: 20px 20px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: #1D81CC;
+}
+
+.header-container {
+    display: flex;
+    /* height: calc(100vh - 20px - 20px); */
+    height: 80vh;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: end;
+}
+
+.social-media-icons ul {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #1D81CC;
+    margin: 0;
+}
+
+.header-container p {
+    font-size: 2rem;
+    text-transform: lowercase;
+    columns: #042259;
+}
+
+
+
+
+
+/* Header Ends */
