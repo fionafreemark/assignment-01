@@ -5,7 +5,7 @@
 
 /* GLOBAL STYLING BEGINS */
 * {
-    border: 1px solid rgb(195, 81, 237);
+    // border: 1px solid rgb(195, 81, 237);
     margin: 0;
 
     body {
@@ -57,14 +57,6 @@ h2 {
 a {
     text-decoration: none;
     font-size: 1.1rem;
-    transition: 300ms;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: $marineColor;
-        color: $paleGreyColor;
-    }
 }
 
 p {
@@ -92,12 +84,6 @@ input[type="submit"] {
     }
 }
 
-/* General Icon Styles */
-i {
-    color: $waterBlueColor;
-    font-size: 1.5rem;
-}
-
 /* GLOBAL STYLING ENDS */
 
 /* HEADER BEGINS */
@@ -111,17 +97,7 @@ header {
     position: relative;
 
 
-    .social-media-icons {
-        position: absolute;
-        right: 4%;
-        top: 20%;
-
-        li {
-            padding: 10px 0;
-        }
-    }
-
-    /* Top Nav Styles */
+    /* Top Navigation Bar */
     nav ul {
         display: flex;
         justify-content: flex-end;
@@ -131,13 +107,45 @@ header {
         color: $marineColor;
         font-family: $navFont;
         text-transform: uppercase;
-        padding: 25px 20px;
+        padding: 10px 15px;
+        margin: 0 10px;
+        border-radius: 5%;
         font-weight: 600;
         font-size: 1rem;
+        transition: 300ms;
 
         &:hover,
-        &:focus {
-            color: $waterBlueColor;
+        &:focus,
+        &:active {
+            color: $lightPinkColor;
+            background-color: $marineColor;
+        }
+    }
+}
+
+/* Vertical Icon Bar */
+.social-media-icons {
+    position: absolute;
+    text-align: center;
+    right: 4%;
+    top: 15%;
+
+    i {
+        color: $waterBlueColor;
+        font-size: 1.5rem;
+        padding: 10px 10px;
+        margin: 5px 0;
+        transition: 500ms;
+        width: 100%;
+
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $marineColor;
+            color: $paleRoseColor;
+            width: 100%;
+            border-radius: 50%;
         }
     }
 }
@@ -188,6 +196,14 @@ header {
 
         li {
             flex-basis: 32%;
+            border: 5px solid $paleRoseColor;
+            transition: 300ms;
+
+            &:hover,
+            &:focus,
+            &:active {
+                border: 5px solid $waterBlueColor;
+            }
         }
     }
 }
@@ -220,7 +236,8 @@ header {
             border: 1px solid $marineColor;
 
             &:hover,
-            &:focus &:active {
+            &:focus,
+            &:active {
                 background-color: $paleRoseColor;
                 color: $marineColor;
                 border: 1px solid $marineColor;
@@ -281,23 +298,42 @@ header {
             justify-content: center;
             align-items: center;
 
-            // icon styling
+        }
+    }
 
+    /* Lower Icon Styles */
+    a {
+        font-size: 1.4rem;
+        color: $waterBlueColor;
+        letter-spacing: .1rem;
+        transition: 500ms;
 
-            a {
-                font-size: 1.4rem;
-                color: $waterBlueColor;
-                letter-spacing: .1rem;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $marineColor;
+        }
 
-                i {
-                    color: $marineColor;
-                    font-size: 3rem;
-                    padding: 10px;
-                }
+        i {
+            color: $marineColor;
+            font-size: 3rem;
+            padding: 10px;
+            transition: 500ms;
+            width: 100%;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $marineColor;
+                color: $paleRoseColor;
+                width: 100%;
+                border-radius: 50%;
             }
+
         }
     }
 }
+
 
 /* ICON SECTION ENDS */
 
@@ -382,6 +418,12 @@ footer {
         justify-content: space-between;
         align-items: flex-end;
         flex-basis: 15%;
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: $marineColor;
+        }
     }
 }
 

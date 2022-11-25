@@ -237,7 +237,6 @@ html {
 
 /* GLOBAL STYLING BEGINS */
 * {
-  border: 1px solid rgb(195, 81, 237);
   margin: 0;
 }
 * body {
@@ -285,12 +284,6 @@ h2 {
 a {
   text-decoration: none;
   font-size: 1.1rem;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-a:hover, a:focus, a:active {
-  background-color: #042259;
-  color: #F0F5FF;
 }
 
 p {
@@ -318,12 +311,6 @@ input[type=submit]:active {
   border: 1px solid #F5C8CF;
 }
 
-/* General Icon Styles */
-i {
-  color: #1D81CC;
-  font-size: 1.5rem;
-}
-
 /* GLOBAL STYLING ENDS */
 /* HEADER BEGINS */
 header {
@@ -333,15 +320,7 @@ header {
   max-width: 100%;
   padding: 25px 0;
   position: relative;
-  /* Top Nav Styles */
-}
-header .social-media-icons {
-  position: absolute;
-  right: 4%;
-  top: 20%;
-}
-header .social-media-icons li {
-  padding: 10px 0;
+  /* Top Navigation Bar */
 }
 header nav ul {
   display: -webkit-box;
@@ -355,12 +334,40 @@ header nav a {
   color: #042259;
   font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
-  padding: 25px 20px;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 5%;
   font-weight: 600;
   font-size: 1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
-header nav a:hover, header nav a:focus {
+header nav a:hover, header nav a:focus, header nav a:active {
+  color: #FCDDE2;
+  background-color: #042259;
+}
+
+/* Vertical Icon Bar */
+.social-media-icons {
+  position: absolute;
+  text-align: center;
+  right: 4%;
+  top: 15%;
+}
+.social-media-icons i {
   color: #1D81CC;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  margin: 5px 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  width: 100%;
+}
+.social-media-icons i:hover, .social-media-icons i:focus, .social-media-icons i:active {
+  background-color: #042259;
+  color: #F5C8CF;
+  width: 100%;
+  border-radius: 50%;
 }
 
 /* Electric Select Logo */
@@ -417,6 +424,12 @@ header nav a:hover, header nav a:focus {
 .gallery-section ul li {
   -ms-flex-preferred-size: 32%;
       flex-basis: 32%;
+  border: 5px solid #F5C8CF;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.gallery-section ul li:hover, .gallery-section ul li:focus, .gallery-section ul li:active {
+  border: 5px solid #1D81CC;
 }
 
 .coffee-appliances {
@@ -456,7 +469,7 @@ header nav a:hover, header nav a:focus {
   transition: 300ms;
   border: 1px solid #042259;
 }
-.coffee-appliances .coffee-appliances-text .opposite-button:hover, .coffee-appliances .coffee-appliances-text .opposite-button:focus .coffee-appliances .coffee-appliances-text .opposite-button:active {
+.coffee-appliances .coffee-appliances-text .opposite-button:hover, .coffee-appliances .coffee-appliances-text .opposite-button:focus, .coffee-appliances .coffee-appliances-text .opposite-button:active {
   background-color: #F5C8CF;
   color: #042259;
   border: 1px solid #042259;
@@ -504,6 +517,7 @@ header nav a:hover, header nav a:focus {
 .icon-section {
   background-color: #FCDDE2;
   padding: 80px 0;
+  /* Lower Icon Styles */
 }
 .icon-section .icon-flex-container {
   display: -webkit-box;
@@ -530,19 +544,29 @@ header nav a:hover, header nav a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.icon-section .icon-flex-container .shop a,
-.icon-section .icon-flex-container .jobs a,
-.icon-section .icon-flex-container .events a {
+.icon-section a {
   font-size: 1.4rem;
   color: #1D81CC;
   letter-spacing: 0.1rem;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
-.icon-section .icon-flex-container .shop a i,
-.icon-section .icon-flex-container .jobs a i,
-.icon-section .icon-flex-container .events a i {
+.icon-section a:hover, .icon-section a:focus, .icon-section a:active {
+  color: #042259;
+}
+.icon-section a i {
   color: #042259;
   font-size: 3rem;
   padding: 10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  width: 100%;
+}
+.icon-section a i:hover, .icon-section a i:focus, .icon-section a i:active {
+  background-color: #042259;
+  color: #F5C8CF;
+  width: 100%;
+  border-radius: 50%;
 }
 
 /* ICON SECTION ENDS */
@@ -647,6 +671,11 @@ footer > p {
           align-items: flex-end;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
+}
+.footer-flex-container .secondary-nav a:hover,
+.footer-flex-container .secondary-nav a:focus,
+.footer-flex-container .secondary-nav a:active {
+  color: #042259;
 }
 
 /* FOOTER SECTION ENDS */
