@@ -5,37 +5,40 @@
 
 /* GLOBAL STYLING BEGINS */
 * {
-    border: 1px solid rgb(195, 81, 237);
+    // border: 1px solid rgb(195, 81, 237);
     margin: 0;
+
+    body {
+        font-size: 62.5%;
+        font-family: $baseFont;
+
+        .wrapper {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+    }
 }
 
-body {
-    font-size: 62.5%;
-    font-family: $baseFont;
-}
-
-.wrapper {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* List Styles */
 ul {
     margin: 0;
     padding: 0;
+
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
+/* Global Font Styles */
 h1,
 h2,
 h3,
@@ -51,13 +54,18 @@ h2 {
     color: $waterBlueColor;
 }
 
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
 p {
     font-size: 1rem;
     line-height: 1.6rem;
     color: $darkGreyColor;
 }
 
-// Read More Button Styles
+// "Read More" & Submit Button Styles
 .read-more,
 input[type="submit"] {
     background-color: $paleRoseColor;
@@ -66,13 +74,7 @@ input[type="submit"] {
     font-size: 1.1rem;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block
-}
-
-/* icon base styling */
+/* General Icon Styles */
 i {
     color: $waterBlueColor;
     font-size: 1.5rem;
@@ -87,62 +89,62 @@ header {
     background-repeat: no-repeat;
     background-position: bottom right;
     background-color: $paleRoseColor;
-    padding: 20px 0;
-}
+    padding: 25px 0;
 
-header nav ul {
-    display: flex;
-    justify-content: flex-end;
-}
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-header nav a {
-    color: $marineColor;
-    font-family: $navFont;
-    text-transform: uppercase;
-    padding: 20px 20px;
-    font-weight: 600;
-    font-size: 1rem;
-}
+    nav a {
+        color: $marineColor;
+        font-family: $navFont;
+        text-transform: uppercase;
+        padding: 25px 20px;
+        font-weight: 600;
+        font-size: 1rem;
 
-header nav a:hover,
-header nav a:focus {
-    color: $waterBlueColor;
-}
+        &:hover,
+        &:focus {
+            color: $waterBlueColor;
+        }
+    }
 
-.header-container {
-    display: flex;
-    /* height: calc(100vh - 20px - 20px); */
-    height: 80vh;
-}
+    .header-container {
+        display: flex;
+        /* height: calc(100vh - 20px - 20px); */
+        height: 80vh;
 
-.logo-section {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    justify-content: center;
-}
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            justify-content: center;
+        }
 
-.social-media-icons {
-    display: flex;
-    flex-basis: 50%;
-    justify-content: end;
-}
+        .social-media-icons {
+            display: flex;
+            flex-basis: 50%;
+            justify-content: end;
+        }
 
-.social-media-icons ul {
-    flex-direction: column;
-}
+        .social-media-icons ul {
+            flex-direction: column;
+        }
+    }
 
-h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    color: $waterBlueColor;
-    margin: 0;
-}
+    h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $waterBlueColor;
+        margin: 0;
+    }
 
-.header-container p {
-    font-size: 1.8rem;
-    text-transform: lowercase;
-    columns: $marineColor;
+    .header-container p {
+        font-size: 1.8rem;
+        text-transform: lowercase;
+        columns: $marineColor;
+    }
 }
 
 /* HEADER ENDS */
@@ -221,6 +223,7 @@ h1 {
         // padding: 100px 100px 100px 150px;
         padding: 5vh 5vw 5vh 11vw;
     }
+
     .new-home {
         // padding: 100px 150px 100px 100px;
         padding: 5vh 11vw 5vh 5vw;
@@ -271,11 +274,11 @@ footer {
     background-color: $paleGreyColor;
 
     >p {
-            background-color: $marineColor;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
+        background-color: $marineColor;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
 
 /* footer structure */
@@ -331,11 +334,12 @@ footer {
     }
 
     .secondary-nav {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-basis: 15%;
-        }
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-basis: 15%;
+    }
 }
+
+/* FOOTER SECTION ENDS */
