@@ -264,7 +264,7 @@ li {
 
 a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 h1,
@@ -278,6 +278,11 @@ a {
 h2 {
   font-size: 2.2rem;
   color: #1D81CC;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 
 .read-more {
@@ -433,10 +438,6 @@ h1 {
   padding: 0 0 5px 0;
   text-align: left;
 }
-.coffee-appliances .coffee-appliances-text p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
 .coffee-appliances .coffee-appliances-text .opposite-button {
   background-color: #042259;
   color: #FCDDE2;
@@ -452,4 +453,27 @@ h1 {
 .blog-section .grid-formation {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+.blog-section .smoothies-anyone,
+.blog-section .new-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #F0F5FF;
+}
+.blog-section .smoothies-anyone {
+  padding: 100px 100px 100px 150px;
+}
+.blog-section .new-home {
+  padding: 100px 150px 100px 100px;
 }
