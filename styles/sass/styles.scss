@@ -3,26 +3,15 @@
 @use 'setup';
 
 
-/* Styling Notes */
-/* Marine #042259 Pale Rose #F5C8CF Pale Grey #F0F5FF */
-/* Light Pink #FCDDE2 Darker Grey #1F2022 Water Blue #1D81CC */
-/*     font-family: 'Barlow',
-    sans-serif;
-
-    font-family: 'Catamaran',
-    sans-serif; 600
-
-    font-family: 'Emblema One',
-    cursive; */
-
-/* Global Styling Begins */
+// GLOBAL STYLES BEGIN
 * {
-    /* border: 1px solid rgb(195, 81, 237); */
+    border: 1px solid rgb(195, 81, 237);
     margin: 0;
 }
 
 body {
     font-size: 62.5%;
+    font-family: $baseFont;
 }
 
 .wrapper {
@@ -44,28 +33,42 @@ li {
 
 a {
     text-decoration: none;
+    font-size: 1rem;
 }
 
 h1,
 h2,
 h3,
 a {
-    font-family: 'Emblema One', cursive;
+    font-family: $headerFont;
+    text-transform: uppercase;
 }
 
-p {
-    font-family: 'Barlow', sans-serif;
+h2 {
+    font-size: 2.2rem;
+    color: $waterBlueColor;
 }
 
-/* Global Styling Ends */
+.read-more {
+    background-color: $paleRoseColor;
+    padding: 10px 15px;
+    color: $marineColor;
+}
 
-/* Header Begins */
+img {
+    width: 100%;
+}
+
+
+// GLOBAL STYLING ENDS
+
+// HEADER BEGINS
 header {
     background-image: url(../assets/header-group-appliances.png);
     height: 100vh;
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-color: #FCDDE2;
+    background-color: $paleRoseColor;
     padding: 20px 0;
 }
 
@@ -75,17 +78,17 @@ header nav ul {
 }
 
 header nav a {
-    color: #042259;
+    color: $marineColor;
+    font-family: $navFont;
     text-transform: uppercase;
     padding: 20px 20px;
-    font-family: 'Catamaran', sans-serif;
     font-weight: 600;
     font-size: 1rem;
 }
 
 header nav a:hover,
 header nav a:focus {
-    color: #1D81CC;
+    color: $waterBlueColor;
 }
 
 .header-container {
@@ -112,20 +115,86 @@ header nav a:focus {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
-    color: #1D81CC;
+    color: $waterBlueColor;
     margin: 0;
 }
 
 .header-container p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: lowercase;
-    columns: #042259;
+    columns: $marineColor;
+}
+
+// HEADER ENDS
+
+// GALLERY SECTION BEGINS
+
+.gallery-section {
+    background-color: $lightPinkColor;
+    
+    h2 {
+        text-align: center;
+        padding: 60px 0;
+    }
+    
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            flex-basis: 32%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.coffee-appliances {
+    display: flex;
+    padding: 60px 0;
+
+    img {
+        width: 30%;
+    }
+    
+    .coffee-appliances-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 70%;
+        padding-left: 20px;
+        h2 {
+            padding: 0 0 5px 0;
+            text-align: left;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        .opposite-button {
+            background-color: $marineColor;
+            color: $lightPinkColor;
+        }
+    }
+}
+
+// GALLERY SECTION ENDS
+
+// BLOG SECTION BEGINS
+
+.blog-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-formation {
+        flex-basis: 50%;
+    }
 }
 
 
 
-
-
-/* Header Ends */
+// BLOG SECTION ENDS

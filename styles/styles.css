@@ -235,25 +235,14 @@ html {
   overflow: hidden;
 }
 
-/* Styling Notes */
-/* Marine #042259 Pale Rose #F5C8CF Pale Grey #F0F5FF */
-/* Light Pink #FCDDE2 Darker Grey #1F2022 Water Blue #1D81CC */
-/*     font-family: 'Barlow',
-    sans-serif;
-
-    font-family: 'Catamaran',
-    sans-serif; 600
-
-    font-family: 'Emblema One',
-    cursive; */
-/* Global Styling Begins */
 * {
-  /* border: 1px solid rgb(195, 81, 237); */
+  border: 1px solid rgb(195, 81, 237);
   margin: 0;
 }
 
 body {
   font-size: 62.5%;
+  font-family: "Barlow", sans-serif;
 }
 
 .wrapper {
@@ -275,6 +264,7 @@ li {
 
 a {
   text-decoration: none;
+  font-size: 1rem;
 }
 
 h1,
@@ -282,20 +272,30 @@ h2,
 h3,
 a {
   font-family: "Emblema One", cursive;
+  text-transform: uppercase;
 }
 
-p {
-  font-family: "Barlow", sans-serif;
+h2 {
+  font-size: 2.2rem;
+  color: #1D81CC;
 }
 
-/* Global Styling Ends */
-/* Header Begins */
+.read-more {
+  background-color: #F5C8CF;
+  padding: 10px 15px;
+  color: #042259;
+}
+
+img {
+  width: 100%;
+}
+
 header {
   background-image: url(../assets/header-group-appliances.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-color: #FCDDE2;
+  background-color: #F5C8CF;
   padding: 20px 0;
 }
 
@@ -310,9 +310,9 @@ header nav ul {
 
 header nav a {
   color: #042259;
+  font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
   padding: 20px 20px;
-  font-family: "Catamaran", sans-serif;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -364,18 +364,92 @@ header nav a:focus {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #1D81CC;
   margin: 0;
 }
 
 .header-container p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: lowercase;
   -webkit-columns: #042259;
      -moz-columns: #042259;
           columns: #042259;
 }
 
-/* Header Ends */
+.gallery-section {
+  background-color: #FCDDE2;
+}
+.gallery-section h2 {
+  text-align: center;
+  padding: 60px 0;
+}
+.gallery-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallery-section ul li {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+.gallery-section ul img {
+  width: 100%;
+}
+
+.coffee-appliances {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+}
+.coffee-appliances img {
+  width: 30%;
+}
+.coffee-appliances .coffee-appliances-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 70%;
+  padding-left: 20px;
+}
+.coffee-appliances .coffee-appliances-text h2 {
+  padding: 0 0 5px 0;
+  text-align: left;
+}
+.coffee-appliances .coffee-appliances-text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.coffee-appliances .coffee-appliances-text .opposite-button {
+  background-color: #042259;
+  color: #FCDDE2;
+}
+
+.blog-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.blog-section .grid-formation {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
