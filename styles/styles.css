@@ -235,6 +235,7 @@ html {
   overflow: hidden;
 }
 
+/* GLOBAL STYLING BEGINS */
 * {
   border: 1px solid rgb(195, 81, 237);
   margin: 0;
@@ -295,6 +296,14 @@ img {
   width: 100%;
 }
 
+/* icon base styling */
+i {
+  color: #1D81CC;
+  font-size: 1.5rem;
+}
+
+/* GLOBAL STYLING ENDS */
+/* HEADER BEGINS */
 header {
   background-image: url(../assets/header-group-appliances.png);
   height: 100vh;
@@ -383,6 +392,8 @@ h1 {
           columns: #042259;
 }
 
+/* HEADER ENDS */
+/* GALLERY SECTION BEGINS */
 .gallery-section {
   background-color: #FCDDE2;
 }
@@ -443,6 +454,8 @@ h1 {
   color: #FCDDE2;
 }
 
+/* GALLERY SECTION ENDS */
+/* BLOG SECTION BEGINS */
 .blog-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,3 +490,51 @@ h1 {
 .blog-section .new-home {
   padding: 100px 150px 100px 100px;
 }
+
+/* BLOG SECTION ENDS */
+/* ICON SECTION BEGINS */
+.icon-section {
+  background-color: #FCDDE2;
+  padding: 80px 0;
+}
+.icon-section .icon-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.icon-section .icon-flex-container .shop,
+.icon-section .icon-flex-container .jobs,
+.icon-section .icon-flex-container .events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.icon-section .icon-flex-container .shop i,
+.icon-section .icon-flex-container .jobs i,
+.icon-section .icon-flex-container .events i {
+  color: #042259;
+  font-size: 4em;
+  padding: 10px;
+}
+.icon-section .icon-flex-container .shop a,
+.icon-section .icon-flex-container .jobs a,
+.icon-section .icon-flex-container .events a {
+  font-size: 1.4rem;
+  color: #1D81CC;
+  letter-spacing: 0.1rem;
+}
+
+/* ICON SECTION ENDS */

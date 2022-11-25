@@ -3,7 +3,7 @@
 @use 'setup';
 
 
-// GLOBAL STYLES BEGIN
+/* GLOBAL STYLING BEGINS */
 * {
     border: 1px solid rgb(195, 81, 237);
     margin: 0;
@@ -65,10 +65,15 @@ img {
     width: 100%;
 }
 
+/* icon base styling */
+i {
+    color: $waterBlueColor;
+    font-size: 1.5rem;
+}
 
-// GLOBAL STYLING ENDS
+/* GLOBAL STYLING ENDS */
 
-// HEADER BEGINS
+/* HEADER BEGINS */
 header {
     background-image: url(../assets/header-group-appliances.png);
     height: 100vh;
@@ -133,9 +138,9 @@ h1 {
     columns: $marineColor;
 }
 
-// HEADER ENDS
+/* HEADER ENDS */
 
-// GALLERY SECTION BEGINS
+/* GALLERY SECTION BEGINS */
 
 .gallery-section {
     background-color: $lightPinkColor;
@@ -188,9 +193,9 @@ h1 {
     }
 }
 
-// GALLERY SECTION ENDS
+/* GALLERY SECTION ENDS */
 
-// BLOG SECTION BEGINS
+/* BLOG SECTION BEGINS */
 
 .blog-section {
     display: flex;
@@ -218,6 +223,39 @@ h1 {
     }
 }
 
+/* BLOG SECTION ENDS */
 
+/* ICON SECTION BEGINS */
 
-// BLOG SECTION ENDS
+.icon-section {
+    background-color: $lightPinkColor;
+    padding: 80px 0;
+    .icon-flex-container {
+        display: flex;
+        justify-content: space-evenly;
+        
+        .shop,
+        .jobs,
+        .events {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // icon styling
+            i {
+                color: $marineColor;
+                font-size: 4em;
+                padding: 10px;
+            }
+
+            a {
+                font-size: 1.4rem;
+                color: $waterBlueColor;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+}
+
+/* ICON SECTION ENDS */
