@@ -94,6 +94,7 @@ header {
     background-position: bottom right;
     max-width: 100%;
     padding: 25px 0;
+    object-fit: cover;
     position: relative;
 
 
@@ -227,6 +228,10 @@ header {
         h2 {
             padding: 0 0 5px 0;
             text-align: left;
+        }
+
+        p {
+            padding-bottom: 20px;
         }
 
         .opposite-button {
@@ -428,3 +433,111 @@ footer {
 }
 
 /* FOOTER SECTION ENDS */
+
+@media (max-width: 1245px) {}
+
+@media (max-width: 940px) {
+
+    /* HEADER EDITS */
+    .header-logo {
+        margin-top: 20%;
+        justify-content: flex-start;
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    /*GALLERY SECTION EDITS */
+    .gallery-section ul li {
+        flex-basis: 49%;
+
+        &:last-child {
+            display: none;
+        }
+    }
+
+
+
+
+    /* COFFEE APPLIANCES EDITS */
+    .coffee-appliances {
+        flex-direction: column;
+
+        .img-container {
+            width: 100%;
+            height: 700px;
+            padding: 40px 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .coffee-appliances-text {
+            align-items: center;
+            width: 100%;
+            padding: 0 0;
+
+            h2 {
+                text-align: center;
+                padding: 0 0 20px 0;
+            }
+
+            .opposite-button {
+                text-align: center;
+                padding: 20px 30px;
+            }
+        }
+    }
+
+    /* BLOG SECTION BEGINS */
+    .blog-section {
+        .grid-formation {
+            flex-basis: 100%;
+        }
+
+        .smoothies-anyone,
+        .new-home {
+            background-color: $lightPinkColor;
+            padding: 5vh 10vw 5vh 10vw;
+            align-items: center;
+
+            p {
+                padding: 20px 0;
+            }
+        }
+
+        .read-more {
+            background-color: $marineColor;
+            color: $lightPinkColor;
+            transition: 300ms;
+            border: 1px solid $marineColor;
+            padding: 20px 30px;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $paleRoseColor;
+                color: $marineColor;
+                border: 1px solid $marineColor;
+            }
+        }
+
+        img {
+            height: 600px;
+            // width: 100%;
+            object-fit: cover;
+        }
+
+        .blog-img-1 {
+            order: -1;
+        }
+    }
+}
