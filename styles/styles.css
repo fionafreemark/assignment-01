@@ -237,14 +237,15 @@ html {
 
 /* GLOBAL STYLING BEGINS */
 * {
-  border: 1px solid rgb(195, 81, 237);
   margin: 0;
 }
 
-body {
+html {
   font-size: 62.5%;
   font-family: "Barlow", sans-serif;
+  color: #1F2022;
 }
+
 body .wrapper {
   width: 80%;
   max-width: 1200px;
@@ -267,7 +268,7 @@ ul li {
   padding: 0;
 }
 
-/* Global Font Styles */
+/* Base Font Styles */
 h1,
 h2,
 h3,
@@ -279,19 +280,27 @@ input[type=submit] {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 4.2rem;
   color: #1D81CC;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #1D81CC;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.9rem;
+  color: #1F2022;
+  letter-spacing: 0.02rem;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.1rem;
-}
-
-p {
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-  color: #1F2022;
+  font-size: 1.8rem;
+  line-height: 2.9rem;
 }
 
 .read-more,
@@ -299,7 +308,8 @@ input[type=submit] {
   background-color: #F5C8CF;
   padding: 10px 15px;
   color: #042259;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  line-height: 2.9rem;
   -webkit-transition: 300ms;
   transition: 300ms;
   border: 1px solid #F5C8CF;
@@ -316,15 +326,21 @@ input[type=submit]:active {
 /* GLOBAL STYLING ENDS */
 /* HEADER BEGINS */
 header {
-  background-image: url(../assets/header-group-appliances.png), radial-gradient(at bottom right, #fff, #F5C8CF);
-  background-repeat: no-repeat;
+  background-image: radial-gradient(at bottom right, #fff, #F5C8CF);
   background-position: bottom right;
   padding: 25px 0;
   height: 100vh;
   position: relative;
 }
-header .menu-button,
-header input[type=checkbox] {
+header .background-img {
+  background-image: url(../assets/header-group-appliances.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  height: calc(100vh - 25px);
+}
+
+.menu-button,
+input[type=checkbox] {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -332,19 +348,25 @@ header input[type=checkbox] {
   padding: 5px 10px;
   z-index: 10;
 }
-header .menu-button .fa-bars,
-header input[type=checkbox] .fa-bars {
+.menu-button .fa-bars,
+input[type=checkbox] .fa-bars {
   color: #042259;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: light;
+  -webkit-transform: scale(1.7, 1);
+          transform: scale(1.7, 1);
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-header .menu-button .fa-bars:hover, header .menu-button .fa-bars:focus,
-header input[type=checkbox] .fa-bars:hover,
-header input[type=checkbox] .fa-bars:focus {
+.menu-button .fa-bars:hover, .menu-button .fa-bars:focus,
+input[type=checkbox] .fa-bars:hover,
+input[type=checkbox] .fa-bars:focus {
   color: #042259;
+  -webkit-transform: scale(1.7, 1);
+          transform: scale(1.7, 1);
 }
-header #toggle {
+
+#toggle {
   display: none;
 }
 
@@ -367,7 +389,6 @@ header .menu li a {
   padding: 5px 10px;
   margin: 0 10px;
   font-weight: 600;
-  font-size: 1.2rem;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -385,44 +406,39 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 }
 .social-media-icons i {
   color: #1D81CC;
-  font-size: 1.5rem;
-  padding: 10px 10px;
+  font-size: 2.5rem;
+  padding: 8px 8px;
   margin: 5px 0;
   -webkit-transition: 500ms;
   transition: 500ms;
   width: 100%;
+  border-radius: 50%;
 }
 .social-media-icons i:hover, .social-media-icons i:focus, .social-media-icons i:active {
-  background-color: #042259;
-  color: #F5C8CF;
+  background-color: #1D81CC;
+  color: #FCDDE2;
   width: 100%;
   border-radius: 50%;
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
 }
 
 /* Electric Select Logo */
 .header-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100vh - 44px);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: absolute;
   width: 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: 5rem;
+  top: 20%;
 }
 .header-logo h1 {
-  font-size: 6.5rem;
-  text-transform: uppercase;
+  font-size: 10.46rem;
+  line-height: 8.73rem;
   color: #1D81CC;
   margin: 0;
 }
 .header-logo p {
-  font-size: 2.3rem;
+  font-size: 3.72rem;
+  line-height: 3.79rem;
+  letter-spacing: 0.03rem;
   text-transform: lowercase;
   -webkit-columns: #042259;
      -moz-columns: #042259;
@@ -497,7 +513,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   text-align: left;
 }
 .coffee-appliances .coffee-appliances-text p {
-  padding-bottom: 20px;
+  padding-bottom: 3%;
 }
 .coffee-appliances .coffee-appliances-text .opposite-button {
   background-color: #042259;
@@ -542,11 +558,19 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
           align-items: flex-start;
   background-color: #F0F5FF;
 }
+.blog-section .smoothies-anyone h2,
+.blog-section .new-home h2 {
+  width: 90%;
+}
+.blog-section .smoothies-anyone p,
+.blog-section .new-home p {
+  padding: 5% 0;
+}
 .blog-section .smoothies-anyone {
-  padding: 5vh 5vw 5vh 11vw;
+  padding: 5vh 5vw 5vh 10vw;
 }
 .blog-section .new-home {
-  padding: 5vh 11vw 5vh 5vw;
+  padding: 5vh 10vw 5vh 5vw;
 }
 
 /* BLOG SECTION ENDS */
@@ -585,8 +609,8 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   display: none;
 }
 .icon-section a {
-  font-size: 1.4rem;
   color: #1D81CC;
+  font-size: 3.12rem;
   letter-spacing: 0.1rem;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -596,7 +620,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 }
 .icon-section a i {
   color: #042259;
-  font-size: 3rem;
+  font-size: 5.1rem;
   padding: 10px;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -631,11 +655,9 @@ footer > p {
           justify-content: space-between;
   padding: 80px 0;
 }
-.footer-flex-container h3,
 .footer-flex-container a {
   color: #1D81CC;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
 }
 .footer-flex-container h3 {
   padding-bottom: 10px;
@@ -667,7 +689,7 @@ footer > p {
 .footer-flex-container .stay-updated-form .email-container input[type=email] {
   width: 75%;
   padding: 10px 15px;
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-family: "Barlow", sans-serif;
   border: 1px solid #FCDDE2;
 }
@@ -720,21 +742,25 @@ footer > p {
 
 /* FOOTER SECTION ENDS */
 @media (max-width: 1245px) {
-  /* HEADER EDITS */
-  .header-logo {
-    margin-top: 20%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  header .background-img {
+    background-position: bottom right -30%;
+    background-size: 70% auto;
   }
 }
 @media (max-width: 940px) {
   /* HEADER EDITS */
+  header .background-img {
+    background-position: bottom right -50%;
+    background-size: 90% auto;
+  }
   .header-logo h1 {
-    font-size: 5rem;
+    font-size: 8rem;
   }
   .header-logo p {
-    font-size: 1.6rem;
+    font-size: 3rem;
+  }
+  .social-media-icons {
+    display: none;
   }
   /*GALLERY SECTION EDITS */
   .gallery-section ul li {
@@ -871,8 +897,16 @@ footer > p {
     width: 95%;
   }
   /* HEADER STYLES */
-  .social-media-icons {
-    display: none;
+  .header-logo {
+    width: 80%;
+  }
+  .blog-section .smoothies-anyone,
+.blog-section .new-home {
+    padding: 20px 3%;
+  }
+  .blog-section .smoothies-anyone p,
+.blog-section .new-home p {
+    padding: 30px 0;
   }
   /* ICON SECTION STYLES */
   .icon-flex-container {
@@ -903,9 +937,6 @@ footer > p {
     display: block;
     cursor: pointer;
   }
-  header .wrapper {
-    position: relative;
-  }
   header nav {
     position: absolute;
     top: 5%;
@@ -916,6 +947,14 @@ footer > p {
   }
   header #toggle:checked + ul.nav {
     display: block;
+  }
+  .header-logo h1 {
+    font-size: 6.2rem;
+    line-height: 6rem;
+  }
+  .header-logo p {
+    font-size: 2.5rem;
+    padding: 5px 0;
   }
   .coffee-appliances {
     padding: 40px 0 20px 0;
@@ -930,9 +969,5 @@ footer > p {
     max-height: 300px;
     -o-object-position: top;
        object-position: top;
-  }
-  .blog-section .smoothies-anyone,
-.blog-section .new-home {
-    padding: 20px 10px;
   }
 }

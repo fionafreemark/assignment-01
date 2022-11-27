@@ -5,14 +5,17 @@
 
 /* GLOBAL STYLING BEGINS */
 * {
-    border: 1px solid rgb(195, 81, 237);
+    // border: 1px solid rgb(195, 81, 237);
     margin: 0;
 }
 
-body {
+html {
     font-size: 62.5%;
     font-family: $baseFont;
+    color: $darkGreyColor;
+}
 
+body {
     .wrapper {
         width: 80%;
         max-width: 1200px;
@@ -38,7 +41,7 @@ ul {
     }
 }
 
-/* Global Font Styles */
+/* Base Font Styles */
 h1,
 h2,
 h3,
@@ -50,28 +53,45 @@ input[type="submit"] {
 }
 
 h2 {
-    font-size: 2.2rem;
+    // Equiv font size = 42px
+    // COMPLETED
+    font-size: 4.2rem;
+    color: $waterBlueColor;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2.5rem;
     color: $waterBlueColor;
 }
 
-a {
-    text-decoration: none;
-    font-size: 1.1rem;
+p {
+    // Equiv font size = 20px
+    // Line height = 29px
+    // Letter spacing = 0.2px
+    font-size: 2rem;
+    line-height: 2.9rem;
+    color: $darkGreyColor;
+    letter-spacing: 0.02rem;
 }
 
-p {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    color: $darkGreyColor;
+a {
+    // Equiv font size = 18px
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
 }
 
 // "Read More" & Submit Button Styles
 .read-more,
 input[type="submit"] {
+    // equiv font size 20px
+    // eqiv line height 29px
     background-color: $paleRoseColor;
     padding: 10px 15px;
     color: $marineColor;
-    font-size: 1.3rem;
+    font-size: 2rem;
+    line-height: 2.9rem;
     transition: 300ms;
     border: 1px solid $paleRoseColor;
 
@@ -89,66 +109,76 @@ input[type="submit"] {
 /* HEADER BEGINS */
 header {
 
-    background-image: url(../assets/header-group-appliances.png), radial-gradient(at bottom right, #fff, $paleRoseColor);
-    background-repeat: no-repeat;
+    background-image: radial-gradient(at bottom right, #fff, $paleRoseColor);
     background-position: bottom right;
     padding: 25px 0;
     height: 100vh;
     position: relative;
 
-    .menu-button,
-    input[type="checkbox"] {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        display: none;
-        padding: 5px 10px;
-        z-index: 10;
+    .background-img {
+        background-image: url(../assets/header-group-appliances.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        // 25px removed from vh because top header padding was knocking it down below the bottom edge of the container
+        height: calc(100vh - 25px);
+    }
+}
 
-        .fa-bars {
+.menu-button,
+input[type="checkbox"] {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: none;
+    padding: 5px 10px;
+    z-index: 10;
+
+    .fa-bars {
+        color: $marineColor;
+        font-size: 3rem;
+        font-weight: light;
+        transform: scale(1.7, 1);
+        // padding: 5px 10px;
+        transition: 500ms;
+
+        &:hover,
+        &:focus {
             color: $marineColor;
-            font-size: 1.5rem;
-            // padding: 5px 10px;
-            transition: 500ms;
-
-            &:hover,
-            &:focus {
-                color: $marineColor;
-            }
+            transform: scale(1.7, 1);
         }
     }
+}
 
-    #toggle {
-        display: none;
-    }
+#toggle {
+    display: none;
 }
 
 /* Top Navigation Bar */
 
 header .menu {
-        display: flex;
-        justify-content: flex-end;
-        li {
-            padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
 
-            a {
-                color: $marineColor;
-                font-family: $navFont;
-                text-transform: uppercase;
-                padding: 5px 10px;
-                margin: 0 10px;
-                font-weight: 600;
-                font-size: 1.2rem;
-                transition: 300ms;
+    li {
+        padding: 10px 0;
 
-                &:hover,
-                &:focus,
-                &:active {
-                    color: $lightPinkColor;
-                    background-color: $marineColor;
-                }
+        a {
+            color: $marineColor;
+            font-family: $navFont;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            margin: 0 10px;
+            font-weight: 600;
+            transition: 300ms;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $lightPinkColor;
+                background-color: $marineColor;
             }
         }
+    }
 }
 
 /* Vertical Icon Bar */
@@ -160,44 +190,51 @@ header .menu {
 
     i {
         color: $waterBlueColor;
-        font-size: 1.5rem;
-        padding: 10px 10px;
+        font-size: 2.5rem;
+        padding: 8px 8px;
         margin: 5px 0;
         transition: 500ms;
         width: 100%;
-
+        border-radius: 50%;
 
         &:hover,
         &:focus,
         &:active {
-            background-color: $marineColor;
-            color: $paleRoseColor;
+            background-color: $waterBlueColor;
+            color: $lightPinkColor;
             width: 100%;
             border-radius: 50%;
+            transform: rotate(1turn);
         }
     }
+
 }
 
 /* Electric Select Logo */
 .header-logo {
-    display: flex;
-    height: calc(100vh - 44px);
-    flex-direction: column;
+    position: absolute;
     width: 50%;
-    justify-content: center;
-    line-height: 5rem;
-
-
+    top: 20%;
 
     h1 {
-        font-size: 6.5rem;
-        text-transform: uppercase;
+        // font size = 104.6px
+        // line height = 87.3px
+        // COMPLETE
+        font-size: 10.46rem;
+        line-height: 8.73rem;
         color: $waterBlueColor;
         margin: 0;
     }
 
+    // Subtitle - Best Home Appliances
     p {
-        font-size: 2.3rem;
+        // Font size = 37.2px
+        // Line height: 37.9px;
+        // letter-spacing: 0.3px;
+        // COMPLETE
+        font-size: 3.72rem;
+        line-height: 3.79rem;
+        letter-spacing: 0.03rem;
         text-transform: lowercase;
         columns: $marineColor;
         padding: 20px 0;
@@ -263,7 +300,7 @@ header .menu {
         }
 
         p {
-            padding-bottom: 20px;
+            padding-bottom: 3%;
         }
 
         .opposite-button {
@@ -302,16 +339,21 @@ header .menu {
         justify-content: space-evenly;
         align-items: flex-start;
         background-color: $paleGreyColor;
+
+        h2 {
+            width: 90%;
+        }
+        p {
+            padding: 5% 0;
+        }
     }
 
     .smoothies-anyone {
-        // padding: 100px 100px 100px 150px;
-        padding: 5vh 5vw 5vh 11vw;
+        padding: 5vh 5vw 5vh 10vw;
     }
 
     .new-home {
-        // padding: 100px 150px 100px 100px;
-        padding: 5vh 11vw 5vh 5vw;
+        padding: 5vh 10vw 5vh 5vw;
     }
 }
 
@@ -343,8 +385,9 @@ header .menu {
 
     /* Lower Icon Styles */
     a {
-        font-size: 1.4rem;
+        // font size equiv = 31.2rem
         color: $waterBlueColor;
+        font-size: 3.12rem;
         letter-spacing: .1rem;
         transition: 500ms;
 
@@ -356,7 +399,7 @@ header .menu {
 
         i {
             color: $marineColor;
-            font-size: 3rem;
+            font-size: 5.1rem;
             padding: 10px;
             transition: 500ms;
             width: 100%;
@@ -396,12 +439,9 @@ footer {
     justify-content: space-between;
     padding: 80px 0;
 
-
-    h3,
     a {
         color: $waterBlueColor;
-        font-size: 1.2rem;
-        letter-spacing: .1rem;
+        font-size: 2.5rem;
     }
 
     h3 {
@@ -423,7 +463,7 @@ footer {
             input[type="email"] {
                 width: 75%;
                 padding: 10px 15px;
-                font-size: 1rem;
+                font-size: 1.8rem;
                 font-family: $baseFont;
                 border: 1px solid $lightPinkColor;
             }
@@ -470,30 +510,34 @@ footer {
 /* FOOTER SECTION ENDS */
 
 @media (max-width: 1245px) {
-
-    /* HEADER EDITS */
-    header {
-        // background-size: cover;
-
-    }
-
-    .header-logo {
-        margin-top: 20%;
-        justify-content: flex-start;
+    header .background-img {
+        background-position: bottom right -30%;
+        background-size: 70% auto;
     }
 }
 
 @media (max-width: 940px) {
 
     /* HEADER EDITS */
+
+    header .background-img {
+        background-position: bottom right -50%;
+        background-size: 90% auto;
+    }
+
     .header-logo {
+
         h1 {
-            font-size: 5rem;
+            font-size: 8rem;
         }
 
         p {
-            font-size: 1.6rem;
+            font-size: 3rem;
         }
+    }
+
+    .social-media-icons {
+        display: none;
     }
 
     /*GALLERY SECTION EDITS */
@@ -640,9 +684,23 @@ footer {
     }
 
     /* HEADER STYLES */
-    .social-media-icons {
-        display: none;
+
+    .header-logo {
+        width: 80%;
     }
+
+    .blog-section {
+
+        .smoothies-anyone,
+        .new-home {
+            padding: 20px 3%;
+
+            p {
+                padding: 30px 0;
+            }
+        }
+    }
+
 
     /* ICON SECTION STYLES */
     .icon-flex-container {
@@ -673,10 +731,6 @@ footer {
             cursor: pointer;
         }
 
-        .wrapper {
-            position: relative;
-        }
-
         nav {
             position: absolute;
             top: 5%;
@@ -692,6 +746,21 @@ footer {
         }
 
     }
+
+    .header-logo {
+        h1 {
+            font-size: 6.2rem;
+            line-height: 6rem;
+
+        }
+
+        p {
+            font-size: 2.5rem;
+            padding: 5px 0;
+        }
+    }
+
+
 
 
 
@@ -714,12 +783,6 @@ footer {
         img {
             max-height: 300px;
             object-position: top;
-        }
-
-        .smoothies-anyone,
-        .new-home {
-            padding: 20px 10px;
-
         }
     }
 
