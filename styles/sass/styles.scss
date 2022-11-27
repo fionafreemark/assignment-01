@@ -53,8 +53,6 @@ input[type="submit"] {
 }
 
 h2 {
-    // Equiv font size = 42px
-    // COMPLETED
     font-size: 4.2rem;
     color: $waterBlueColor;
     font-weight: 400;
@@ -66,9 +64,6 @@ h3 {
 }
 
 p {
-    // Equiv font size = 20px
-    // Line height = 29px
-    // Letter spacing = 0.2px
     font-size: 2rem;
     line-height: 2.9rem;
     color: $darkGreyColor;
@@ -76,7 +71,6 @@ p {
 }
 
 a {
-    // Equiv font size = 18px
     text-decoration: none;
     font-size: 1.8rem;
     line-height: 2.9rem;
@@ -115,6 +109,7 @@ header {
     height: 100vh;
     position: relative;
 
+    /* Background Image Is In a Separate Container Due to Resizing Issues */
     .background-img {
         background-image: url(../assets/header-group-appliances.png);
         background-repeat: no-repeat;
@@ -207,7 +202,6 @@ header .menu {
             transform: rotate(1turn);
         }
     }
-
 }
 
 /* Electric Select Logo */
@@ -217,21 +211,14 @@ header .menu {
     top: 20%;
 
     h1 {
-        // font size = 104.6px
-        // line height = 87.3px
-        // COMPLETE
         font-size: 10.46rem;
         line-height: 8.73rem;
         color: $waterBlueColor;
         margin: 0;
     }
 
-    // Subtitle - Best Home Appliances
+    /* Subtitle: Best Home Appliances */
     p {
-        // Font size = 37.2px
-        // Line height: 37.9px;
-        // letter-spacing: 0.3px;
-        // COMPLETE
         font-size: 3.72rem;
         line-height: 3.79rem;
         letter-spacing: 0.03rem;
@@ -343,6 +330,7 @@ header .menu {
         h2 {
             width: 90%;
         }
+
         p {
             padding: 5% 0;
         }
@@ -363,7 +351,7 @@ header .menu {
 
 .icon-section {
     background-color: $lightPinkColor;
-    padding: 80px 0;
+    padding: 3% 0 10% 0;
 
     .icon-flex-container {
         display: flex;
@@ -379,6 +367,7 @@ header .menu {
         }
     }
 
+    /* In Mobile Version The Events Link Changes to Community So I'm Hiding This One Until Later*/
     .community-link {
         display: none;
     }
@@ -389,6 +378,7 @@ header .menu {
         color: $waterBlueColor;
         font-size: 3.12rem;
         letter-spacing: .1rem;
+        padding-top: 5%;
         transition: 500ms;
 
         &:hover,
@@ -400,9 +390,10 @@ header .menu {
         i {
             color: $marineColor;
             font-size: 5.1rem;
-            padding: 10px;
+            padding: 15px;
             transition: 500ms;
             width: 100%;
+            border-radius: 50%;
 
             &:hover,
             &:focus,
@@ -412,11 +403,9 @@ header .menu {
                 width: 100%;
                 border-radius: 50%;
             }
-
         }
     }
 }
-
 
 /* ICON SECTION ENDS */
 
@@ -448,6 +437,7 @@ footer {
         padding-bottom: 10px;
     }
 
+    /* Stay Updated Form */
     .stay-updated-form {
         display: flex;
         flex-direction: column;
@@ -455,11 +445,13 @@ footer {
         align-items: flex-start;
         flex-basis: 50%;
 
+        /* Email Form Container*/
         .email-container {
             display: flex;
             width: 100%;
             padding-top: 10px;
 
+            /* Email Input */
             input[type="email"] {
                 width: 75%;
                 padding: 10px 15px;
@@ -468,6 +460,7 @@ footer {
                 border: 1px solid $lightPinkColor;
             }
 
+            /* Email Submit Button Input */
             input[type="submit"] {
                 border: none;
                 cursor: pointer;
@@ -484,20 +477,35 @@ footer {
         }
     }
 
+    /* Contact Container*/
     .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-basis: 20%;
-        // margin-left: 10%;
+        flex-basis: 40%;
+        padding-left: 2%;
+        flex-shrink: 2;
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        .p-container {
+            display: flex;
+        }
+
+        .p-container p:first-child {
+            padding-right: 2%;
+        }
     }
 
+    /* Secondary Nav */
     .secondary-nav {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        flex-basis: 15%;
+        flex-basis: 10%;
 
         a:hover,
         a:focus,
@@ -509,24 +517,40 @@ footer {
 
 /* FOOTER SECTION ENDS */
 
+/* MEDIA QUERY MAX WIDTH 1245PX */
+
 @media (max-width: 1245px) {
+
+    /* Header Background Image */
     header .background-img {
         background-position: bottom right -30%;
         background-size: 70% auto;
     }
+
+    /* Footer Contact Container*/
+    footer .p-container {
+        flex-direction: column;
+    }
+
+    .p-container p:first-child {
+        padding-right: 0;
+    }
 }
+
+/* END OF MEDIA QUERY MAX WIDTH 1245PX */
+
+/* MEDIA QUERY MAX WIDTH 940PX */
 
 @media (max-width: 940px) {
 
-    /* HEADER EDITS */
-
+    /* Header */
     header .background-img {
         background-position: bottom right -50%;
         background-size: 90% auto;
     }
 
+    /* Header Logo */
     .header-logo {
-
         h1 {
             font-size: 8rem;
         }
@@ -536,11 +560,12 @@ footer {
         }
     }
 
+    /* Vertical Icon Section */
     .social-media-icons {
         display: none;
     }
 
-    /*GALLERY SECTION EDITS */
+    /*Gallery Section */
     .gallery-section ul li {
         flex-basis: 49%;
 
@@ -549,10 +574,7 @@ footer {
         }
     }
 
-
-
-
-    /* COFFEE APPLIANCES EDITS */
+    /* Coffee Appliances*/
     .coffee-appliances {
         flex-direction: column;
 
@@ -563,8 +585,6 @@ footer {
 
             img {
                 max-height: 100%;
-                // width: 100%;
-                // object-fit: cover;
             }
         }
 
@@ -581,11 +601,12 @@ footer {
             .opposite-button {
                 text-align: center;
                 padding: 20px 30px;
+                line-height: 1;
             }
         }
     }
 
-    /* BLOG SECTION BEGINS */
+    /* Blog Section */
     .blog-section {
         .grid-formation {
             flex-basis: 100%;
@@ -612,11 +633,12 @@ footer {
             transition: 300ms;
             border: 1px solid $marineColor;
             padding: 20px 30px;
+            line-height: 1;
 
             &:hover,
             &:focus,
             &:active {
-                background-color: $paleRoseColor;
+                background-color: $lightPinkColor;
                 color: $marineColor;
                 border: 1px solid $marineColor;
             }
@@ -632,12 +654,12 @@ footer {
         }
     }
 
-    /* ICON SECTION BEGINS */
+    /* Icon Section*/
     .icon-section {
         background-color: $paleRoseColor;
     }
 
-    /*FOOTER SECTION BEGINS */
+    /*Footer Section */
     .footer-flex-container {
         justify-content: space-between;
         flex-wrap: wrap;
@@ -646,7 +668,11 @@ footer {
         .stay-updated-form {
             flex-basis: 100%;
             align-items: center;
-            padding-bottom: 20px;
+            padding-bottom: 10%;
+
+            p {
+                padding: 2% 0;
+            }
 
             .email-container {
                 flex-direction: column;
@@ -660,14 +686,22 @@ footer {
                 input[type="submit"] {
                     margin-top: 10px;
                     padding: 20px 30px;
+                    line-height: 1;
                 }
             }
         }
 
+        /* Footer Contact */
         .contact {
             flex-basis: 60%;
+            padding: 0;
+
+            p {
+                font-size: 2rem;
+            }
         }
 
+        /* Footer Nav */
         .secondary-nav {
             flex-basis: 40%;
         }
@@ -675,20 +709,25 @@ footer {
 
 }
 
+/* END OF MEDIA QUERY MAX-WIDTH 940PX */
+
 /* MEDIA QUERY MAX-WIDTH 768PX */
+
 @media (max-width: 768px) {
+
+    /* Wrapper Edit */
     body {
         .wrapper {
             width: 95%;
         }
     }
 
-    /* HEADER STYLES */
-
+    /* Header */
     .header-logo {
         width: 80%;
     }
 
+    /* Blog Section */
     .blog-section {
 
         .smoothies-anyone,
@@ -701,8 +740,7 @@ footer {
         }
     }
 
-
-    /* ICON SECTION STYLES */
+    /* Icon Section */
     .icon-flex-container {
         flex-direction: column;
 
@@ -722,15 +760,25 @@ footer {
     }
 }
 
+/* END OF MEDIA QUIERY MAX-WIDTH 768PX */
 
 /* MEDIA QUERY MAX-WIDTH 480PX */
+
 @media (max-width: 480px) {
+
+    /* General Styles*/
+    h2 {
+        font-size: 3.4rem;
+    }
+
+    /* Header */
     header {
         .menu-button {
             display: block;
             cursor: pointer;
         }
 
+        /* Main Nav */
         nav {
             position: absolute;
             top: 5%;
@@ -741,12 +789,13 @@ footer {
             font-size: 1rem;
         }
 
+        /* Toggle For Hidden Menu */
         #toggle:checked+ul.nav {
             display: block;
         }
-
     }
 
+    /* Header Logo */
     .header-logo {
         h1 {
             font-size: 6.2rem;
@@ -760,11 +809,7 @@ footer {
         }
     }
 
-
-
-
-
-
+    /* Gallery Section - Coffee Appliances */
     .coffee-appliances {
         padding: 40px 0 20px 0;
 
@@ -779,12 +824,22 @@ footer {
         }
     }
 
+    /* Blog Section */
     .blog-section {
         img {
-            max-height: 300px;
+            max-height: 250px;
             object-position: top;
         }
+
+        .smoothies-anyone,
+        .new-home {
+            padding: 10% 3%;
+        }
+
+        .smoothies-anyone h2 {
+            width: 100%;
+        }
     }
-
-
 }
+
+/* END OF MEDIA QUERY MAX WIDTH 480PX */

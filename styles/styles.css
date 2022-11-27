@@ -331,6 +331,7 @@ header {
   padding: 25px 0;
   height: 100vh;
   position: relative;
+  /* Background Image Is In a Separate Container Due to Resizing Issues */
 }
 header .background-img {
   background-image: url(../assets/header-group-appliances.png);
@@ -428,6 +429,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   position: absolute;
   width: 50%;
   top: 20%;
+  /* Subtitle: Best Home Appliances */
 }
 .header-logo h1 {
   font-size: 10.46rem;
@@ -577,7 +579,8 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 /* ICON SECTION BEGINS */
 .icon-section {
   background-color: #FCDDE2;
-  padding: 80px 0;
+  padding: 3% 0 10% 0;
+  /* In Mobile Version The Events Link Changes to Community So I'm Hiding This One Until Later*/
   /* Lower Icon Styles */
 }
 .icon-section .icon-flex-container {
@@ -612,6 +615,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   color: #1D81CC;
   font-size: 3.12rem;
   letter-spacing: 0.1rem;
+  padding-top: 5%;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -621,10 +625,11 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 .icon-section a i {
   color: #042259;
   font-size: 5.1rem;
-  padding: 10px;
+  padding: 15px;
   -webkit-transition: 500ms;
   transition: 500ms;
   width: 100%;
+  border-radius: 50%;
 }
 .icon-section a i:hover, .icon-section a i:focus, .icon-section a i:active {
   background-color: #042259;
@@ -654,6 +659,9 @@ footer > p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 80px 0;
+  /* Stay Updated Form */
+  /* Contact Container*/
+  /* Secondary Nav */
 }
 .footer-flex-container a {
   color: #1D81CC;
@@ -678,6 +686,7 @@ footer > p {
           align-items: flex-start;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  /* Email Form Container*/
 }
 .footer-flex-container .stay-updated-form .email-container {
   display: -webkit-box;
@@ -685,6 +694,8 @@ footer > p {
   display: flex;
   width: 100%;
   padding-top: 10px;
+  /* Email Input */
+  /* Email Submit Button Input */
 }
 .footer-flex-container .stay-updated-form .email-container input[type=email] {
   width: 75%;
@@ -714,8 +725,22 @@ footer > p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  padding-left: 2%;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+.footer-flex-container .contact p {
+  font-size: 1.8rem;
+}
+.footer-flex-container .contact .p-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer-flex-container .contact .p-container p:first-child {
+  padding-right: 2%;
 }
 .footer-flex-container .secondary-nav {
   display: -webkit-box;
@@ -731,8 +756,8 @@ footer > p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -ms-flex-preferred-size: 15%;
-      flex-basis: 15%;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
 }
 .footer-flex-container .secondary-nav a:hover,
 .footer-flex-container .secondary-nav a:focus,
@@ -741,28 +766,44 @@ footer > p {
 }
 
 /* FOOTER SECTION ENDS */
+/* MEDIA QUERY MAX WIDTH 1245PX */
 @media (max-width: 1245px) {
+  /* Header Background Image */
   header .background-img {
     background-position: bottom right -30%;
     background-size: 70% auto;
   }
+  /* Footer Contact Container*/
+  footer .p-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .p-container p:first-child {
+    padding-right: 0;
+  }
 }
+/* END OF MEDIA QUERY MAX WIDTH 1245PX */
+/* MEDIA QUERY MAX WIDTH 940PX */
 @media (max-width: 940px) {
-  /* HEADER EDITS */
+  /* Header */
   header .background-img {
     background-position: bottom right -50%;
     background-size: 90% auto;
   }
+  /* Header Logo */
   .header-logo h1 {
     font-size: 8rem;
   }
   .header-logo p {
     font-size: 3rem;
   }
+  /* Vertical Icon Section */
   .social-media-icons {
     display: none;
   }
-  /*GALLERY SECTION EDITS */
+  /*Gallery Section */
   .gallery-section ul li {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
@@ -770,7 +811,7 @@ footer > p {
   .gallery-section ul li:last-child {
     display: none;
   }
-  /* COFFEE APPLIANCES EDITS */
+  /* Coffee Appliances*/
   .coffee-appliances {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -799,8 +840,9 @@ footer > p {
   .coffee-appliances .coffee-appliances-text .opposite-button {
     text-align: center;
     padding: 20px 30px;
+    line-height: 1;
   }
-  /* BLOG SECTION BEGINS */
+  /* Blog Section */
   .blog-section .grid-formation {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -828,9 +870,10 @@ footer > p {
     transition: 300ms;
     border: 1px solid #042259;
     padding: 20px 30px;
+    line-height: 1;
   }
   .blog-section .read-more:hover, .blog-section .read-more:focus, .blog-section .read-more:active {
-    background-color: #F5C8CF;
+    background-color: #FCDDE2;
     color: #042259;
     border: 1px solid #042259;
   }
@@ -844,11 +887,11 @@ footer > p {
         -ms-flex-order: -1;
             order: -1;
   }
-  /* ICON SECTION BEGINS */
+  /* Icon Section*/
   .icon-section {
     background-color: #F5C8CF;
   }
-  /*FOOTER SECTION BEGINS */
+  /*Footer Section */
   .footer-flex-container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -856,6 +899,8 @@ footer > p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 40px 0 60px 0;
+    /* Footer Contact */
+    /* Footer Nav */
   }
   .footer-flex-container .stay-updated-form {
     -ms-flex-preferred-size: 100%;
@@ -863,7 +908,10 @@ footer > p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 10%;
+  }
+  .footer-flex-container .stay-updated-form p {
+    padding: 2% 0;
   }
   .footer-flex-container .stay-updated-form .email-container {
     -webkit-box-orient: vertical;
@@ -881,25 +929,33 @@ footer > p {
   .footer-flex-container .stay-updated-form .email-container input[type=submit] {
     margin-top: 10px;
     padding: 20px 30px;
+    line-height: 1;
   }
   .footer-flex-container .contact {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
+    padding: 0;
+  }
+  .footer-flex-container .contact p {
+    font-size: 2rem;
   }
   .footer-flex-container .secondary-nav {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
   }
 }
+/* END OF MEDIA QUERY MAX-WIDTH 940PX */
 /* MEDIA QUERY MAX-WIDTH 768PX */
 @media (max-width: 768px) {
+  /* Wrapper Edit */
   body .wrapper {
     width: 95%;
   }
-  /* HEADER STYLES */
+  /* Header */
   .header-logo {
     width: 80%;
   }
+  /* Blog Section */
   .blog-section .smoothies-anyone,
 .blog-section .new-home {
     padding: 20px 3%;
@@ -908,7 +964,7 @@ footer > p {
 .blog-section .new-home p {
     padding: 30px 0;
   }
-  /* ICON SECTION STYLES */
+  /* Icon Section */
   .icon-flex-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -931,8 +987,18 @@ footer > p {
     display: inline;
   }
 }
+/* END OF MEDIA QUIERY MAX-WIDTH 768PX */
 /* MEDIA QUERY MAX-WIDTH 480PX */
 @media (max-width: 480px) {
+  /* General Styles*/
+  h2 {
+    font-size: 3.4rem;
+  }
+  /* Header */
+  header {
+    /* Main Nav */
+    /* Toggle For Hidden Menu */
+  }
   header .menu-button {
     display: block;
     cursor: pointer;
@@ -948,6 +1014,7 @@ footer > p {
   header #toggle:checked + ul.nav {
     display: block;
   }
+  /* Header Logo */
   .header-logo h1 {
     font-size: 6.2rem;
     line-height: 6rem;
@@ -956,6 +1023,7 @@ footer > p {
     font-size: 2.5rem;
     padding: 5px 0;
   }
+  /* Gallery Section - Coffee Appliances */
   .coffee-appliances {
     padding: 40px 0 20px 0;
   }
@@ -965,9 +1033,18 @@ footer > p {
   .coffee-appliances .coffee-appliances-text h2 {
     padding: 0 30px 30px 20px;
   }
+  /* Blog Section */
   .blog-section img {
-    max-height: 300px;
+    max-height: 250px;
     -o-object-position: top;
        object-position: top;
   }
+  .blog-section .smoothies-anyone,
+.blog-section .new-home {
+    padding: 10% 3%;
+  }
+  .blog-section .smoothies-anyone h2 {
+    width: 100%;
+  }
 }
+/* END OF MEDIA QUERY MAX WIDTH 480PX */
