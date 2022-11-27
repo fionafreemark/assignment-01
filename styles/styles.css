@@ -410,8 +410,8 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   font-size: 2.5rem;
   padding: 8px 8px;
   margin: 5px 0;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 800ms;
+  transition: 800ms;
   width: 100%;
   border-radius: 50%;
 }
@@ -569,10 +569,16 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   padding: 5% 0;
 }
 .blog-section .smoothies-anyone {
-  padding: 5vh 5vw 5vh 10vw;
+  padding: 5% 5% 5% 10%;
 }
 .blog-section .new-home {
-  padding: 5vh 10vw 5vh 5vw;
+  padding: 5% 10% 5% 5%;
+}
+.blog-section img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+  max-width: 100%;
 }
 
 /* BLOG SECTION ENDS */
@@ -841,6 +847,7 @@ footer > p {
     text-align: center;
     padding: 20px 30px;
     line-height: 1;
+    margin-top: 20px;
   }
   /* Blog Section */
   .blog-section .grid-formation {
@@ -949,7 +956,7 @@ footer > p {
 @media (max-width: 768px) {
   /* Wrapper Edit */
   body .wrapper {
-    width: 95%;
+    width: 90%;
   }
   /* Header */
   .header-logo {
@@ -958,7 +965,7 @@ footer > p {
   /* Blog Section */
   .blog-section .smoothies-anyone,
 .blog-section .new-home {
-    padding: 20px 3%;
+    padding: 20px 10%;
   }
   .blog-section .smoothies-anyone p,
 .blog-section .new-home p {
@@ -1028,7 +1035,7 @@ footer > p {
     padding: 40px 0 20px 0;
   }
   .coffee-appliances .img-container {
-    height: 450px;
+    height: 425px;
   }
   .coffee-appliances .coffee-appliances-text h2 {
     padding: 0 30px 30px 20px;
@@ -1041,7 +1048,7 @@ footer > p {
   }
   .blog-section .smoothies-anyone,
 .blog-section .new-home {
-    padding: 10% 3%;
+    padding: 10% 5%;
   }
   .blog-section .smoothies-anyone h2 {
     width: 100%;
