@@ -323,25 +323,33 @@ header {
   height: 100vh;
   position: relative;
 }
-header .menu-button {
+header .menu-button,
+header input[type=checkbox] {
   position: absolute;
   right: 15px;
   top: 15px;
   display: none;
   padding: 5px 10px;
+  z-index: 10;
 }
-header .menu-button .fa-bars {
+header .menu-button .fa-bars,
+header input[type=checkbox] .fa-bars {
   color: #042259;
   font-size: 1.5rem;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-header .menu-button .fa-bars:hover, header .menu-button .fa-bars:focus {
+header .menu-button .fa-bars:hover, header .menu-button .fa-bars:focus,
+header input[type=checkbox] .fa-bars:hover,
+header input[type=checkbox] .fa-bars:focus {
   color: #042259;
+}
+header #toggle {
+  display: none;
 }
 
 /* Top Navigation Bar */
-header nav ul {
+header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,19 +357,21 @@ header nav ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-header nav a {
+header .menu li {
+  padding: 10px 0;
+}
+header .menu li a {
   color: #042259;
   font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 5px 10px;
   margin: 0 10px;
-  border-radius: 5%;
   font-weight: 600;
   font-size: 1.2rem;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-header nav a:hover, header nav a:focus, header nav a:active {
+header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   color: #FCDDE2;
   background-color: #042259;
 }
@@ -891,14 +901,20 @@ footer > p {
 @media (max-width: 480px) {
   header .menu-button {
     display: block;
+    cursor: pointer;
   }
-  header .menu-button:active {
+  header .wrapper {
+    position: relative;
+  }
+  header nav {
+    position: absolute;
+    top: 5%;
     display: none;
   }
-  header nav ul {
-    display: none;
+  header menu a {
+    font-size: 1rem;
   }
-  header nav ul:active {
+  header #toggle:checked + ul.nav {
     display: block;
   }
   .coffee-appliances {

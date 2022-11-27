@@ -96,12 +96,14 @@ header {
     height: 100vh;
     position: relative;
 
-    .menu-button {
+    .menu-button,
+    input[type="checkbox"] {
         position: absolute;
         right: 15px;
         top: 15px;
         display: none;
         padding: 5px 10px;
+        z-index: 10;
 
         .fa-bars {
             color: $marineColor;
@@ -115,36 +117,38 @@ header {
             }
         }
     }
+
+    #toggle {
+        display: none;
+    }
 }
 
 /* Top Navigation Bar */
 
-header {
-    nav {
-        ul {
-            display: flex;
-            justify-content: flex-end;
-        }
-    }
+header .menu {
+        display: flex;
+        justify-content: flex-end;
+        li {
+            padding: 10px 0;
 
-    nav a {
-        color: $marineColor;
-        font-family: $navFont;
-        text-transform: uppercase;
-        padding: 10px 15px;
-        margin: 0 10px;
-        border-radius: 5%;
-        font-weight: 600;
-        font-size: 1.2rem;
-        transition: 300ms;
+            a {
+                color: $marineColor;
+                font-family: $navFont;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                margin: 0 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+                transition: 300ms;
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: $lightPinkColor;
-            background-color: $marineColor;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $lightPinkColor;
+                    background-color: $marineColor;
+                }
+            }
         }
-    }
 }
 
 /* Vertical Icon Bar */
@@ -663,22 +667,33 @@ footer {
 
 /* MEDIA QUERY MAX-WIDTH 480PX */
 @media (max-width: 480px) {
-    header .menu-button {
+    header {
+        .menu-button {
             display: block;
-            &:active {
-                display:none;
-            }
+            cursor: pointer;
         }
 
-    header nav {
+        .wrapper {
+            position: relative;
+        }
 
-        ul {
+        nav {
+            position: absolute;
+            top: 5%;
             display: none;
-            &:active {
-                display:block;
-            }
         }
+
+        menu a {
+            font-size: 1rem;
+        }
+
+        #toggle:checked+ul.nav {
+            display: block;
+        }
+
     }
+
+
 
 
     .coffee-appliances {
@@ -710,5 +725,3 @@ footer {
 
 
 }
-
-
