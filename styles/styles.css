@@ -240,16 +240,17 @@ html {
   border: 1px solid rgb(195, 81, 237);
   margin: 0;
 }
-* body {
+
+body {
   font-size: 62.5%;
   font-family: "Barlow", sans-serif;
 }
-* body .wrapper {
+body .wrapper {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
-* body img {
+body img {
   width: 100%;
   height: auto;
   display: block;
@@ -288,8 +289,8 @@ a {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.6rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
   color: #1F2022;
 }
 
@@ -298,7 +299,7 @@ input[type=submit] {
   background-color: #F5C8CF;
   padding: 10px 15px;
   color: #042259;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   -webkit-transition: 300ms;
   transition: 300ms;
   border: 1px solid #F5C8CF;
@@ -318,13 +319,28 @@ header {
   background-image: url(../assets/header-group-appliances.png), radial-gradient(at bottom right, #fff, #F5C8CF);
   background-repeat: no-repeat;
   background-position: bottom right;
-  max-width: 100%;
   padding: 25px 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100vh;
   position: relative;
-  /* Top Navigation Bar */
 }
+header .menu-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: none;
+  padding: 5px 10px;
+}
+header .menu-button .fa-bars {
+  color: #042259;
+  font-size: 1.5rem;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+header .menu-button .fa-bars:hover, header .menu-button .fa-bars:focus {
+  color: #042259;
+}
+
+/* Top Navigation Bar */
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,7 +357,7 @@ header nav a {
   margin: 0 10px;
   border-radius: 5%;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -390,13 +406,13 @@ header nav a:hover, header nav a:focus, header nav a:active {
   line-height: 5rem;
 }
 .header-logo h1 {
-  font-size: 6rem;
+  font-size: 6.5rem;
   text-transform: uppercase;
   color: #1D81CC;
   margin: 0;
 }
 .header-logo p {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   text-transform: lowercase;
   -webkit-columns: #042259;
      -moz-columns: #042259;
@@ -443,6 +459,11 @@ header nav a:hover, header nav a:focus, header nav a:active {
 }
 .coffee-appliances .img-container {
   width: 30%;
+}
+.coffee-appliances .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 .coffee-appliances .coffee-appliances-text {
   display: -webkit-box;
@@ -549,6 +570,9 @@ header nav a:hover, header nav a:focus, header nav a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.icon-section .community-link {
+  display: none;
 }
 .icon-section a {
   font-size: 1.4rem;
@@ -685,7 +709,7 @@ footer > p {
 }
 
 /* FOOTER SECTION ENDS */
-@media (max-width: 940px) {
+@media (max-width: 1245px) {
   /* HEADER EDITS */
   .header-logo {
     margin-top: 20%;
@@ -693,6 +717,9 @@ footer > p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+@media (max-width: 940px) {
+  /* HEADER EDITS */
   .header-logo h1 {
     font-size: 5rem;
   }
@@ -716,14 +743,11 @@ footer > p {
   }
   .coffee-appliances .img-container {
     width: 100%;
-    height: 700px;
+    height: 600px;
     padding: 40px 0;
   }
   .coffee-appliances .img-container img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    max-height: 100%;
   }
   .coffee-appliances .coffee-appliances-text {
     -webkit-box-align: center;
@@ -795,7 +819,7 @@ footer > p {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 40px 0 60px 0;
   }
   .footer-flex-container .stay-updated-form {
     -ms-flex-preferred-size: 100%;
@@ -823,11 +847,76 @@ footer > p {
     padding: 20px 30px;
   }
   .footer-flex-container .contact {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
   }
   .footer-flex-container .secondary-nav {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+/* MEDIA QUERY MAX-WIDTH 768PX */
+@media (max-width: 768px) {
+  body .wrapper {
+    width: 95%;
+  }
+  /* HEADER STYLES */
+  .social-media-icons {
+    display: none;
+  }
+  /* ICON SECTION STYLES */
+  .icon-flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .icon-flex-container .shop,
+.icon-flex-container .jobs,
+.icon-flex-container .events {
+    padding: 20px 0;
+  }
+  .icon-flex-container .shop .jobs-link,
+.icon-flex-container .jobs .jobs-link,
+.icon-flex-container .events .jobs-link {
+    display: none;
+  }
+  .icon-flex-container .shop .community-link,
+.icon-flex-container .jobs .community-link,
+.icon-flex-container .events .community-link {
+    display: inline;
+  }
+}
+/* MEDIA QUERY MAX-WIDTH 480PX */
+@media (max-width: 480px) {
+  header .menu-button {
+    display: block;
+  }
+  header .menu-button:active {
+    display: none;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav ul:active {
+    display: block;
+  }
+  .coffee-appliances {
+    padding: 40px 0 20px 0;
+  }
+  .coffee-appliances .img-container {
+    height: 450px;
+  }
+  .coffee-appliances .coffee-appliances-text h2 {
+    padding: 0 30px 30px 20px;
+  }
+  .blog-section img {
+    max-height: 300px;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .blog-section .smoothies-anyone,
+.blog-section .new-home {
+    padding: 20px 10px;
   }
 }
