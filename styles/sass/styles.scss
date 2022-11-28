@@ -321,20 +321,38 @@ header .menu {
 /* BLOG SECTION BEGINS */
 
 .blog-section {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    background-color: $paleGreyColor;
 
-    .grid-formation {
-        flex-basis: 50%;
+    img {
+        width: 50vw;
+        height: 50%;
+        object-fit: cover;
+        position: absolute;
     }
 
-    .smoothies-anyone,
-    .new-home {
+    .blender-img {
+        right: 0;
+    }
+
+    .stove-img {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .grid-formation {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
         background-color: $paleGreyColor;
+        width: 50%;
 
         h2 {
             width: 90%;
@@ -346,19 +364,17 @@ header .menu {
     }
 
     .smoothies-anyone {
-        padding: 5% 5% 5% 10%;
+        padding: 10% 7% 10% 0;
+        margin-right: 50%;
     }
 
     .new-home {
-        padding: 5% 10% 5% 5%;
-    }
-
-    img {
-        object-fit: cover;
-        height: auto;
-        max-width: 100%;
+        padding: 10% 0 10% 7%;
+        margin-left: 50%;
     }
 }
+
+
 
 /* BLOG SECTION ENDS */
 
@@ -628,53 +644,86 @@ footer {
         }
     }
 
+
     /* Blog Section */
     .blog-section {
+        background-color: $lightPinkColor;
+
+        img {
+            width: 100vw;
+            max-height: 25%;
+            object-position: top;
+            object-fit: cover;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .blender-img {
+            right: 0;
+            left: 0;
+            top: 0;
+        }
+
+        .stove-img {
+            right: 0;
+            left: 0;
+            top: 50%;
+        }
+    }
+
+
+    .blog-container {
         .grid-formation {
-            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $paleGreyColor;
+            width: 100%;
+            padding: 10% 0;
+
+            h2 {
+                text-align: center;
+                width: 100%;
+            }
+
+            p {
+                padding: 5% 0;
+            }
         }
 
         .smoothies-anyone,
         .new-home {
+            margin-top: 70%;
             background-color: $lightPinkColor;
-            padding: 5vh 10vw 5vh 10vw;
-            align-items: center;
 
-            h2 {
-                text-align: center;
-            }
-
-            p {
-                padding: 20px 0;
-            }
-        }
-
-        .read-more {
-            background-color: $marineColor;
-            color: $lightPinkColor;
-            transition: 300ms;
-            border: 1px solid $marineColor;
-            padding: 20px 30px;
-            line-height: 1;
-
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: $lightPinkColor;
-                color: $marineColor;
+            .read-more {
+                background-color: $marineColor;
+                color: $lightPinkColor;
+                transition: 300ms;
                 border: 1px solid $marineColor;
+                padding: 20px 30px;
+                line-height: 1;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $lightPinkColor;
+                    color: $marineColor;
+                    border: 1px solid $marineColor;
+                }
             }
         }
 
-        img {
-            max-height: 600px;
-            object-fit: cover;
+        .smoothies-anyone {
+            margin-right: 0;
         }
 
-        .blog-img-1 {
-            order: -1;
+        .new-home {
+            margin-left: 0;
         }
     }
+
 
     /* Icon Section*/
     .icon-section {
@@ -749,18 +798,7 @@ footer {
         width: 80%;
     }
 
-    /* Blog Section */
-    .blog-section {
 
-        .smoothies-anyone,
-        .new-home {
-            padding: 20px 10%;
-
-            p {
-                padding: 30px 0;
-            }
-        }
-    }
 
     /* Icon Section */
     .icon-flex-container {
@@ -779,6 +817,15 @@ footer {
                 display: inline;
             }
         }
+    }
+
+    .blog-section {
+        background-color: $lightPinkColor;
+
+        img {
+            max-height: 20%;
+        }
+
     }
 }
 
@@ -861,22 +908,18 @@ footer {
         }
     }
 
-    /* Blog Section */
     .blog-section {
-        img {
-            max-height: 250px;
-            object-position: top;
-        }
+        background-color: $lightPinkColor;
 
+        img {
+            max-height: 18%;
+        }
         .smoothies-anyone,
         .new-home {
-            padding: 10% 5%;
-        }
-
-        .smoothies-anyone h2 {
-            width: 100%;
+            margin-top: 75%;
         }
     }
+
 }
 
 /* END OF MEDIA QUERY MAX WIDTH 480PX */
