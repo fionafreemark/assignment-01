@@ -235,8 +235,6 @@ html {
   overflow: hidden;
 }
 
-/* Note about this assignment: I originally had the fourth section (smooth/new home blog) neatly displayed without the wrapper but the consensus was that everyone was using the wrapper, so I redid it. I don't think it looks as good now whereas before the only issue was that on extremely wide screen display the text nudged slightly outward. 
-
 /* GLOBAL STYLING BEGINS */
 * {
   margin: 0;
@@ -333,7 +331,7 @@ header {
   padding: 25px 0;
   height: 100vh;
   position: relative;
-  /* Background Image Is In a Separate Container Due to Resizing Issues */
+  /* Background Image Is In a Separate Container To Resize Better */
 }
 header .background-img {
   background-image: url(../assets/header-group-appliances.png);
@@ -353,21 +351,19 @@ header .background-img {
   font-weight: light;
   -webkit-transform: scale(1.6, 1);
           transform: scale(1.6, 1);
-  padding: 4% 2%;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  border-radius: 50%;
+  padding: 2% 2%;
+  border: 1px solid transparent;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 .menu-button:hover, .menu-button:focus, .menu-button:active, .menu-button:focus-within,
 #toggle:hover,
 #toggle:focus,
 #toggle:active,
 #toggle:focus-within {
-  color: #FCDDE2;
   -webkit-transform: scale(1.6, 1);
           transform: scale(1.6, 1);
-  background-color: #042259;
-  border-radius: 50%;
+  border: 1px solid #042259;
 }
 
 #toggle {
@@ -430,7 +426,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 /* Electric Select Logo */
 .header-logo {
   position: absolute;
-  width: 50%;
+  width: 45%;
   top: 20%;
   /* Subtitle: Best Home Appliances */
 }
@@ -448,7 +444,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   -webkit-columns: #042259;
      -moz-columns: #042259;
           columns: #042259;
-  padding: 20px 0;
+  padding: 3% 0;
 }
 
 /* HEADER ENDS */
@@ -459,7 +455,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 }
 .gallery-section h2 {
   text-align: center;
-  padding: 60px 0;
+  padding: 8% 0;
 }
 .gallery-section ul {
   display: -webkit-box;
@@ -492,7 +488,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 60px 0;
+  padding: 5% 0 8% 0;
   background-color: #FCDDE2;
 }
 .coffee-container .img-container {
@@ -518,10 +514,10 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 70%;
-  padding-left: 20px;
+  padding-left: 3%;
 }
 .coffee-container .coffee-appliances-text h2 {
-  padding: 0 0 5px 0;
+  padding: 0 0 1% 0;
   text-align: left;
 }
 .coffee-container .coffee-appliances-text p {
@@ -552,6 +548,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  z-index: 10;
 }
 .blog-section .blender-img {
   right: 0;
@@ -605,8 +602,8 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 /* ICON SECTION BEGINS */
 .icon-section {
   background-color: #FCDDE2;
-  padding: 3% 0 10% 0;
-  /* In Mobile Version The Jobs Link Changes to Community So I'm Hiding This One Until Later*/
+  padding: 3% 0 4% 0;
+  /* In Mobile Version The Jobs Link Changes to Community So I'm Hiding it Until Later*/
   /* Lower Icon Styles */
 }
 .icon-section .icon-flex-container {
@@ -645,7 +642,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.icon-section a:hover, .icon-section a:focus, .icon-section a:active {
+.icon-section a:hover, .icon-section a:focus {
   color: #042259;
 }
 .icon-section a i {
@@ -657,7 +654,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   width: 100%;
   border-radius: 50%;
 }
-.icon-section a i:hover, .icon-section a i:focus, .icon-section a i:active {
+.icon-section a i:hover, .icon-section a i:focus {
   background-color: #042259;
   color: #F5C8CF;
   width: 100%;
@@ -684,7 +681,7 @@ footer .copyright {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 80px 0;
+  padding: 5% 0;
   /* Email Form Begins */
   /* Contact Container*/
   /* Secondary Nav */
@@ -694,7 +691,7 @@ footer .copyright {
   font-size: 2.5rem;
 }
 .footer-flex-container h3 {
-  padding-bottom: 10px;
+  padding-bottom: 1%;
 }
 .footer-flex-container .stay-updated-form {
   display: -webkit-box;
@@ -886,7 +883,6 @@ footer .copyright {
     -o-object-fit: cover;
        object-fit: cover;
     position: absolute;
-    z-index: 10;
   }
   .blog-section .blender-img {
     right: 0;
@@ -1021,6 +1017,9 @@ footer .copyright {
     width: 80%;
   }
   /* Icon Section */
+  .icon-section {
+    padding-bottom: 10%;
+  }
   .icon-flex-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1030,7 +1029,7 @@ footer .copyright {
   .icon-flex-container .shop,
 .icon-flex-container .jobs,
 .icon-flex-container .events {
-    padding: 20px 0;
+    padding: 1% 0;
   }
   .icon-flex-container .shop .jobs-link,
 .icon-flex-container .jobs .jobs-link,
@@ -1107,7 +1106,7 @@ footer .copyright {
   }
   /* Coffee Section*/
   .coffee-container {
-    padding: 40px 0 20px 0;
+    padding: 2% 0 2% 0;
   }
   .coffee-container .img-container {
     height: 400px;
@@ -1116,7 +1115,7 @@ footer .copyright {
     padding-bottom: 10%;
   }
   .coffee-container .coffee-appliances-text h2 {
-    padding: 0 30px 30px 20px;
+    padding: 0 4% 6% 4%;
   }
   .blog-section {
     background-color: #FCDDE2;
