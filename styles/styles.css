@@ -235,6 +235,8 @@ html {
   overflow: hidden;
 }
 
+/* Note about this assignment: I originally had the fourth section (smooth/new home blog) neatly displayed without the wrapper but the consensus was that everyone was using the wrapper, so I redid it. I don't think it looks as good now whereas before the only issue was that on extremely wide screen display the text nudged slightly outward. 
+
 /* GLOBAL STYLING BEGINS */
 * {
   margin: 0;
@@ -894,7 +896,7 @@ footer .copyright {
   .blog-section .stove-img {
     right: 0;
     left: 0;
-    top: 50%;
+    top: 49%;
   }
   .blog-container .grid-formation {
     display: -webkit-box;
@@ -1110,6 +1112,9 @@ footer .copyright {
   .coffee-container .img-container {
     height: 400px;
   }
+  .coffee-container .coffee-appliances-text {
+    padding-bottom: 10%;
+  }
   .coffee-container .coffee-appliances-text h2 {
     padding: 0 30px 30px 20px;
   }
@@ -1121,7 +1126,11 @@ footer .copyright {
   }
   .blog-section .smoothies-anyone,
 .blog-section .new-home {
-    margin-top: 75%;
+    margin-top: 80%;
+  }
+  .blog-section .smoothies-anyone p,
+.blog-section .new-home p {
+    padding: 10% 0;
   }
 }
 /* END OF MEDIA QUERY MAX WIDTH 480PX */

@@ -3,6 +3,8 @@
 @use 'setup';
 
 
+/* Note about this assignment: I originally had the fourth section (smooth/new home blog) neatly displayed without the wrapper but the consensus was that everyone was using the wrapper, so I redid it. I don't think it looks as good now whereas before the only issue was that on extremely wide screen display the text nudged slightly outward. 
+
 /* GLOBAL STYLING BEGINS */
 * {
     // border: 1px solid rgb(195, 81, 237);
@@ -667,7 +669,7 @@ footer {
         .stove-img {
             right: 0;
             left: 0;
-            top: 50%;
+            top: 49%;
         }
     }
 
@@ -902,6 +904,7 @@ footer {
         }
 
         .coffee-appliances-text {
+            padding-bottom: 10%;
             h2 {
                 padding: 0 30px 30px 20px;
             }
@@ -914,9 +917,13 @@ footer {
         img {
             max-height: 18%;
         }
+
         .smoothies-anyone,
         .new-home {
-            margin-top: 75%;
+            margin-top: 80%;
+            p {
+                padding: 10% 0;
+            }
         }
     }
 
