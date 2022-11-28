@@ -273,7 +273,7 @@ h1,
 h2,
 h3,
 a,
-input[type=submit] {
+#submit-button {
   font-family: "Emblema One", cursive;
   text-transform: uppercase;
   font-weight: 400;
@@ -304,7 +304,7 @@ a {
 }
 
 .read-more,
-input[type=submit] {
+#submit-button {
   background-color: #F5C8CF;
   padding: 10px 15px;
   color: #042259;
@@ -315,9 +315,9 @@ input[type=submit] {
   border: 1px solid #F5C8CF;
 }
 .read-more:hover, .read-more:focus, .read-more:active,
-input[type=submit]:hover,
-input[type=submit]:focus,
-input[type=submit]:active {
+#submit-button:hover,
+#submit-button:focus,
+#submit-button:active {
   background-color: #042259;
   color: #F5C8CF;
   border: 1px solid #F5C8CF;
@@ -479,21 +479,28 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   border: 5px solid #1D81CC;
 }
 
-.coffee-appliances {
+/* GALLERY SECTION ENDS */
+/* COFFEE SECTION BEGINS */
+.coffee-section {
+  background-color: #FCDDE2;
+}
+
+.coffee-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 60px 0;
+  background-color: #FCDDE2;
 }
-.coffee-appliances .img-container {
+.coffee-container .img-container {
   width: 30%;
 }
-.coffee-appliances .img-container img {
+.coffee-container .img-container img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
 }
-.coffee-appliances .coffee-appliances-text {
+.coffee-container .coffee-appliances-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,27 +517,27 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
   width: 70%;
   padding-left: 20px;
 }
-.coffee-appliances .coffee-appliances-text h2 {
+.coffee-container .coffee-appliances-text h2 {
   padding: 0 0 5px 0;
   text-align: left;
 }
-.coffee-appliances .coffee-appliances-text p {
+.coffee-container .coffee-appliances-text p {
   padding-bottom: 3%;
 }
-.coffee-appliances .coffee-appliances-text .opposite-button {
+.coffee-container .coffee-appliances-text .opposite-button {
   background-color: #042259;
   color: #FCDDE2;
   -webkit-transition: 300ms;
   transition: 300ms;
   border: 1px solid #042259;
 }
-.coffee-appliances .coffee-appliances-text .opposite-button:hover, .coffee-appliances .coffee-appliances-text .opposite-button:focus, .coffee-appliances .coffee-appliances-text .opposite-button:active {
+.coffee-container .coffee-appliances-text .opposite-button:hover, .coffee-container .coffee-appliances-text .opposite-button:focus, .coffee-container .coffee-appliances-text .opposite-button:active {
   background-color: #F5C8CF;
   color: #042259;
   border: 1px solid #042259;
 }
 
-/* GALLERY SECTION ENDS */
+/* COFFEE SECTION ENDS */
 /* BLOG SECTION BEGINS */
 .blog-section {
   display: -webkit-box;
@@ -586,7 +593,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 .icon-section {
   background-color: #FCDDE2;
   padding: 3% 0 10% 0;
-  /* In Mobile Version The Events Link Changes to Community So I'm Hiding This One Until Later*/
+  /* In Mobile Version The Jobs Link Changes to Community So I'm Hiding This One Until Later*/
   /* Lower Icon Styles */
 }
 .icon-section .icon-flex-container {
@@ -649,7 +656,7 @@ header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
 footer {
   background-color: #F0F5FF;
 }
-footer > p {
+footer .copyright {
   background-color: #042259;
   color: #fff;
   text-align: center;
@@ -665,7 +672,7 @@ footer > p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 80px 0;
-  /* Stay Updated Form */
+  /* Email Form Begins */
   /* Contact Container*/
   /* Secondary Nav */
 }
@@ -694,6 +701,12 @@ footer > p {
       flex-basis: 50%;
   /* Email Form Container*/
 }
+.footer-flex-container .stay-updated-form label {
+  font-size: 2rem;
+  font-color: #1F2022;
+  line-height: 2.9rem;
+  letter-spacing: 0.02rem;
+}
 .footer-flex-container .stay-updated-form .email-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,7 +714,7 @@ footer > p {
   width: 100%;
   padding-top: 10px;
   /* Email Input */
-  /* Email Submit Button Input */
+  /* Email Submit Button */
 }
 .footer-flex-container .stay-updated-form .email-container input[type=email] {
   width: 75%;
@@ -710,12 +723,11 @@ footer > p {
   font-family: "Barlow", sans-serif;
   border: 1px solid #FCDDE2;
 }
-.footer-flex-container .stay-updated-form .email-container input[type=submit] {
-  border: none;
+.footer-flex-container .stay-updated-form .email-container #submit-button {
   cursor: pointer;
   border: 1px solid #F5C8CF;
 }
-.footer-flex-container .stay-updated-form .email-container input[type=submit]:hover, .footer-flex-container .stay-updated-form .email-container input[type=submit]:focus, .footer-flex-container .stay-updated-form .email-container input[type=submit]:active {
+.footer-flex-container .stay-updated-form .email-container #submit-button:hover, .footer-flex-container .stay-updated-form .email-container #submit-button:focus, .footer-flex-container .stay-updated-form .email-container #submit-button:active {
   background-color: #042259;
   color: #F5C8CF;
   border: 1px solid #F5C8CF;
@@ -809,7 +821,7 @@ footer > p {
   .social-media-icons {
     display: none;
   }
-  /*Gallery Section */
+  /* Gallery Section */
   .gallery-section ul li {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
@@ -817,33 +829,33 @@ footer > p {
   .gallery-section ul li:last-child {
     display: none;
   }
-  /* Coffee Appliances*/
-  .coffee-appliances {
+  /* Coffee Section */
+  .coffee-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .coffee-appliances .img-container {
+  .coffee-container .img-container {
     width: 100%;
     height: 600px;
     padding: 40px 0;
   }
-  .coffee-appliances .img-container img {
+  .coffee-container .img-container img {
     max-height: 100%;
   }
-  .coffee-appliances .coffee-appliances-text {
+  .coffee-container .coffee-appliances-text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
     padding: 0 0;
   }
-  .coffee-appliances .coffee-appliances-text h2 {
+  .coffee-container .coffee-appliances-text h2 {
     text-align: center;
     padding: 0 0 20px 0;
   }
-  .coffee-appliances .coffee-appliances-text .opposite-button {
+  .coffee-container .coffee-appliances-text .opposite-button {
     text-align: center;
     padding: 20px 30px;
     line-height: 1;
@@ -933,7 +945,7 @@ footer > p {
     width: 100%;
     text-align: center;
   }
-  .footer-flex-container .stay-updated-form .email-container input[type=submit] {
+  .footer-flex-container .stay-updated-form .email-container #submit-button {
     margin-top: 10px;
     padding: 20px 30px;
     line-height: 1;
@@ -1030,14 +1042,14 @@ footer > p {
     font-size: 2.5rem;
     padding: 5px 0;
   }
-  /* Gallery Section - Coffee Appliances */
-  .coffee-appliances {
+  /* Coffee Section*/
+  .coffee-container {
     padding: 40px 0 20px 0;
   }
-  .coffee-appliances .img-container {
+  .coffee-container .img-container {
     height: 425px;
   }
-  .coffee-appliances .coffee-appliances-text h2 {
+  .coffee-container .coffee-appliances-text h2 {
     padding: 0 30px 30px 20px;
   }
   /* Blog Section */

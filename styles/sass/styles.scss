@@ -46,7 +46,7 @@ h1,
 h2,
 h3,
 a,
-input[type="submit"] {
+#submit-button {
     font-family: $headerFont;
     text-transform: uppercase;
     font-weight: 400;
@@ -78,7 +78,7 @@ a {
 
 // "Read More" & Submit Button Styles
 .read-more,
-input[type="submit"] {
+#submit-button {
     // equiv font size 20px
     // eqiv line height 29px
     background-color: $paleRoseColor;
@@ -259,10 +259,17 @@ header .menu {
         }
     }
 }
+/* GALLERY SECTION ENDS */
 
-.coffee-appliances {
+/* COFFEE SECTION BEGINS */
+.coffee-section {
+    background-color: $lightPinkColor;
+}
+
+.coffee-container {
     display: flex;
     padding: 60px 0;
+    background-color: $lightPinkColor;
 
     .img-container {
         width: 30%;
@@ -307,7 +314,7 @@ header .menu {
     }
 }
 
-/* GALLERY SECTION ENDS */
+/* COFFEE SECTION ENDS */
 
 /* BLOG SECTION BEGINS */
 
@@ -373,7 +380,7 @@ header .menu {
         }
     }
 
-    /* In Mobile Version The Events Link Changes to Community So I'm Hiding This One Until Later*/
+    /* In Mobile Version The Jobs Link Changes to Community So I'm Hiding This One Until Later*/
     .community-link {
         display: none;
     }
@@ -420,7 +427,7 @@ header .menu {
 footer {
     background-color: $paleGreyColor;
 
-    >p {
+    .copyright {
         background-color: $marineColor;
         color: #fff;
         text-align: center;
@@ -443,14 +450,19 @@ footer {
         padding-bottom: 10px;
     }
 
-    /* Stay Updated Form */
+    /* Email Form Begins */
     .stay-updated-form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         flex-basis: 50%;
-
+    label {
+        font-size: 2rem;
+        font-color: $darkGreyColor;
+        line-height: 2.9rem;
+        letter-spacing: 0.02rem;
+    }
         /* Email Form Container*/
         .email-container {
             display: flex;
@@ -466,9 +478,8 @@ footer {
                 border: 1px solid $lightPinkColor;
             }
 
-            /* Email Submit Button Input */
-            input[type="submit"] {
-                border: none;
+            /* Email Submit Button */
+            #submit-button {
                 cursor: pointer;
                 border: 1px solid $paleRoseColor;
 
@@ -571,7 +582,7 @@ footer {
         display: none;
     }
 
-    /*Gallery Section */
+    /* Gallery Section */
     .gallery-section ul li {
         flex-basis: 49%;
 
@@ -580,8 +591,8 @@ footer {
         }
     }
 
-    /* Coffee Appliances*/
-    .coffee-appliances {
+    /* Coffee Section */
+    .coffee-container {
         flex-direction: column;
 
         .img-container {
@@ -690,7 +701,7 @@ footer {
                     text-align: center;
                 }
 
-                input[type="submit"] {
+                #submit-button {
                     margin-top: 10px;
                     padding: 20px 30px;
                     line-height: 1;
@@ -816,8 +827,8 @@ footer {
         }
     }
 
-    /* Gallery Section - Coffee Appliances */
-    .coffee-appliances {
+    /* Coffee Section*/
+    .coffee-container {
         padding: 40px 0 20px 0;
 
         .img-container {
