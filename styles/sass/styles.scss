@@ -1,4 +1,3 @@
-// Put variables at top and mixins (if you have), then rest of partials.
 @use 'variables' as *;
 @use 'setup';
 
@@ -259,6 +258,7 @@ header .menu {
 /* GALLERY SECTION ENDS */
 
 /* COFFEE SECTION BEGINS */
+
 .coffee-section {
     background-color: $lightPinkColor;
 }
@@ -544,6 +544,7 @@ footer {
         }
     }
 }
+
 
 /* FOOTER SECTION ENDS */
 
