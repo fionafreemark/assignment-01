@@ -120,28 +120,29 @@ header {
 }
 
 .menu-button,
-input[type="checkbox"] {
+#toggle {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 30px;
+    top: 10px;
     display: none;
-    padding: 5px 10px;
-    z-index: 10;
+    color: $marineColor;
+    font-size: 3rem;
+    font-weight: light;
+    transform: scale(1.6, 1);
+    padding: 4% 2%;
+    transition: 500ms;
+    border-radius: 50%;
 
-    .fa-bars {
-        color: $marineColor;
-        font-size: 3rem;
-        font-weight: light;
-        transform: scale(1.7, 1);
-        // padding: 5px 10px;
-        transition: 500ms;
-
-        &:hover,
-        &:focus {
-            color: $marineColor;
-            transform: scale(1.7, 1);
-        }
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-within {
+        color: $lightPinkColor;
+        transform: scale(1.6, 1);
+        background-color: $marineColor;
+        border-radius: 50%;
     }
+
 }
 
 #toggle {
@@ -259,6 +260,7 @@ header .menu {
         }
     }
 }
+
 /* GALLERY SECTION ENDS */
 
 /* COFFEE SECTION BEGINS */
@@ -457,12 +459,14 @@ footer {
         justify-content: space-between;
         align-items: flex-start;
         flex-basis: 50%;
-    label {
-        font-size: 2rem;
-        font-color: $darkGreyColor;
-        line-height: 2.9rem;
-        letter-spacing: 0.02rem;
-    }
+
+        label {
+            font-size: 2rem;
+            font-color: $darkGreyColor;
+            line-height: 2.9rem;
+            letter-spacing: 0.02rem;
+        }
+
         /* Email Form Container*/
         .email-container {
             display: flex;
@@ -791,39 +795,54 @@ footer {
 
     /* Header */
     header {
+
         .menu-button {
             display: block;
             cursor: pointer;
         }
 
         /* Main Nav */
-        nav {
+        .menu {
             position: absolute;
-            top: 5%;
+            top: 7%;
             display: none;
         }
 
-        menu a {
-            font-size: 1rem;
-        }
-
         /* Toggle For Hidden Menu */
-        #toggle:checked+ul.nav {
-            display: block;
+        #toggle:checked+.menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 0;
+            margin-top: 10%;
+            transition: 300ms;
+
+            li {
+                padding: 0;
+
+                a {
+                    padding: 1% 6%;
+                    margin: 0;
+                    font-size: 2.2rem;
+                }
+            }
+
         }
-    }
 
-    /* Header Logo */
-    .header-logo {
-        h1 {
-            font-size: 6.2rem;
-            line-height: 6rem;
+        /* Header Logo */
+        .header-logo {
+            h1 {
+                font-size: 6.2rem;
+                line-height: 6rem;
 
-        }
+            }
 
-        p {
-            font-size: 2.5rem;
-            padding: 5px 0;
+            p {
+                font-size: 2.5rem;
+                padding: 5px 0;
+            }
         }
     }
 
@@ -832,7 +851,7 @@ footer {
         padding: 40px 0 20px 0;
 
         .img-container {
-            height: 425px;
+            height: 400px;
         }
 
         .coffee-appliances-text {
